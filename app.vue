@@ -1,9 +1,5 @@
 <template>
   <div>
-    <UHeader>Header</UHeader>
-    <UMain>
-      <NuxtPage />
-    </UMain>
-    <UFooter>Footer</UFooter>
+    <NuxtPage />
   </div>
 </template>
