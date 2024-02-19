@@ -1,8 +1,9 @@
 <template>
   <div>
-    {{ test }}
+    <UHeader>Header</UHeader>
+    <UMain>
+      <NuxtPage />
+    </UMain>
+    <UFooter>Footer</UFooter>
   </div>
 </template>
-<script setup lang="ts">
-const test = '33r';
-</script>
