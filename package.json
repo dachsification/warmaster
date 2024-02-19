@@ -11,8 +11,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.13.0",
-    "@nuxt/ui-pro": "^0.7.5",
     "@pinia/nuxt": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
