@@ -1,7 +1,4 @@
 <template>
-  <div>
-    <p>Hallo</p>
-  </div>
+  <v-btn icon="mdi-account" />
 </template>
 <script setup lang="ts"></script>
-<style scoped></style>

@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>Hallo</p>
+    <p>Getting Started</p>
   </div>
 </template>
 <script setup lang="ts"></script>
-<style scoped></style>

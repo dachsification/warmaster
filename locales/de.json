@@ -1,0 +1,66 @@
+{
+  "labels": {
+    "learn": "Lernen",
+    "armies": "Armeen",
+    "rules": "Regeln",
+    "armybuilder": "Armeebauer",
+    "starting": "Loslegen",
+    "welcome": "Willkommen"
+  },
+  "armies": {
+    "tombKing": "Gruftkönige",
+    "albion": "Albion",
+    "araby": "Araby",
+    "beastmen": "Tiermenschen",
+    "bretonnia": "Bretonen",
+    "cathay": "Cathay",
+    "chaos": "Chaos",
+    "chaosDwarfs": "Chaos Zwerge",
+    "daemons": "Dämonen",
+    "darkElves": "Dunkelelfen",
+    "dogsOfWar": "Söldner",
+    "dwarfs": "Zwerge",
+    "goblin": "Goblins",
+    "highElves": "Hochelfen",
+    "kislev": "Kislev",
+    "lizardmen": "Echsenmenschen",
+    "nippon": "Nippon",
+    "norse": "Norse",
+    "ogre": "Oger Königreiche",
+    "orcs": "Orks",
+    "ror": "Regiments of Renown",
+    "skaven": "Skaven",
+    "empire": "Imperium",
+    "vampire": "Vampire",
+    "witchHunter": "Hexenjäger",
+    "woodElves": "Waldelfen"
+  },
+  "armylistHeader": {
+    "troop": "Einheit",
+    "type": "Typ",
+    "attack": "Attacken",
+    "hits": "Lebenspunkte",
+    "armour": "Rüstung",
+    "command": "Moralwert",
+    "unitSize": "Einheitengröße",
+    "points": "Punkte",
+    "minMax": "Min/Max",
+    "special": "Special"
+  },
+  "titles": {
+    "test": "Test",
+    "overview": "Übersicht",
+    "englisch": "Englisch",
+    "german": "Deutsch",
+    "iconic": "Iconic",
+    "title": "Titel",
+    "download": "Download",
+    "intro": "Einleitung",
+    "list": "Armeeliste",
+    "specialRules": "Sonderregeln"
+  },
+  "welcome": "Willkommen",
+  "text": {
+    "introduction": "Herzlich willkommen"
+  }
+}

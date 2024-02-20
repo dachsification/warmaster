@@ -1,0 +1,66 @@
+{
+  "labels": {
+    "learn": "Learn",
+    "armies": "Armies",
+    "rules": "Rules",
+    "armybuilder": "Armybuilder",
+    "starting": "Get started",
+    "welcome": "Welcome"
+  },
+  "armies": {
+    "tombKing": "Tomb Kings",
+    "albion": "Albion",
+    "araby": "Araby",
+    "beastmen": "Beastmen",
+    "bretonnia": "Bretonnia",
+    "cathay": "Cathay",
+    "chaos": "Chaos",
+    "chaosDwarfs": "Chaos Dwarfs",
+    "daemons": "Daemons",
+    "darkElves": "Dark Elves",
+    "dogsOfWar": "Dogs of War",
+    "dwarfs": "Dwarfs",
+    "goblin": "Goblins",
+    "highElves": "High Elves",
+    "kislev": "Kislev",
+    "lizardmen": "Lizardmen",
+    "nippon": "Nippon",
+    "norse": "Norse",
+    "ogre": "Ogre Kingdoms",
+    "orcs": "Orcs",
+    "ror": "Regiments of Renown",
+    "skaven": "Skaven",
+    "empire": "Empire",
+    "vampire": "Vampire Counts",
+    "witchHunter": "Witch Hunter",
+    "woodElves": "Wood Elves"
+  },
+  "titles": {
+    "test": "Test",
+    "overview": "Overview",
+    "englisch": "English",
+    "german": "German",
+    "iconic": "Iconic",
+    "title": "Title",
+    "download": "Download",
+    "intro": "Introduction",
+    "list": "Armylist",
+    "specialRules": "Special Rules"
+  },
+  "armylistHeader": {
+    "troop": "Troop",
+    "type": "Type",
+    "attack": "Attack",
+    "hits": "Hits",
+    "armour": "Armour",
+    "command": "Command",
+    "unitSize": "Unit-Size",
+    "points": "Points",
+    "minMax": "Min/Max",
+    "special": "Special"
+  },
+  "welcome": "Welcome",
+  "text": {
+    "introduction": "Welcome people"
+  }
+}
