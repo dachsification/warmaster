@@ -1,0 +1,186 @@
+{
+  "armies": [
+    {
+      "title": "Overview",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies"
+    },
+    {
+      "title": "Tomb Kings",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/tomb-kings-army"
+    },
+    {
+      "title": "The Empire",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/the-empire-army"
+    },
+    {
+      "title": "Wood Elves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/wood-elves-army"
+    },
+    {
+      "title": "Chaos",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/chaos-army"
+    },
+    {
+      "title": "Orcs",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/orcs-army"
+    },
+    {
+      "title": "High Elves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/high-elves-army"
+    },
+    {
+      "title": "Dwarfs",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/dwarfs-army"
+    },
+    {
+      "title": "Skaven",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/skaven-army"
+    },
+    {
+      "title": "Lizardmen",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/lizardmen-army"
+    },
+    {
+      "title": "Bretonnia",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/bretonnia-army"
+    },
+    {
+      "title": "Kislev",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/kislev-army"
+    },
+    {
+      "title": "Daemons",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/daemons-army"
+    },
+    {
+      "title": "Vampire Counts",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/vampire-counts-army"
+    },
+    {
+      "title": "Araby",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/araby-army"
+    },
+    {
+      "title": "Dogs of War",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/dogs-of-war-army"
+    },
+    {
+      "title": "Ogre Kingdoms",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/ogre-kingdoms-army"
+    },
+    {
+      "title": "Albion",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/albion-army"
+    },
+    {
+      "title": "Goblins",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/goblin-army"
+    },
+    {
+      "title": "Witch Hunters",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/witch-hunters-army"
+    },
+    {
+      "title": "Chaos Dwarves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/chaos-dwarves-army"
+    },
+    {
+      "title": "Beastmen",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/beastmen-army"
+    },
+    {
+      "title": "Norse",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/norse-army"
+    },
+    {
+      "title": "Cathay",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/cathay-army"
+    },
+    {
+      "title": "Nippon",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/nippon-army"
+    },
+    {
+      "title": "RoR",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/ror-army"
+    }
+  ]
+}

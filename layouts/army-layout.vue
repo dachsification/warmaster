@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <cookie-banner />
     <application-header />
     <v-main>
       <v-container fluid>
@@ -8,7 +9,3 @@
     </v-main>
   </v-app>
 </template>
-
-<script setup lang="ts">
-import ApplicationHeader from '../components/application-header.vue';
-</script>

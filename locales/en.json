@@ -4,8 +4,12 @@
     "armies": "Armies",
     "rules": "Rules",
     "armybuilder": "Armybuilder",
+    "armyRules": "Army Rules",
     "starting": "Get started",
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "guardians": "Guardians",
+    "about": "About",
+    "accept": "Accept"
   },
   "armies": {
     "tombKing": "Tomb Kings",
@@ -45,7 +49,8 @@
     "download": "Download",
     "intro": "Introduction",
     "list": "Armylist",
-    "specialRules": "Special Rules"
+    "specialRules": "Special Rules",
+    "cookie": "Cookie Consent"
   },
   "armylistHeader": {
     "troop": "Troop",
@@ -61,6 +66,8 @@
   },
   "welcome": "Welcome",
   "text": {
-    "introduction": "Welcome people"
+    "introduction": "Welcome people",
+    "cookie": "This site uses cookies for your theme, your language choice and the concent of this banner. You can accept to use the cookies bei clicking 'accept' or leave the Website.",
+    "legal": "This website is completely unofficial and in no way endorsed by Games Workshop Limited. All associated logos, marks, names, races, race insignia, characters, vehicles, locations, units, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2024, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners"
   }
 }

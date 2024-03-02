@@ -11,5 +11,6 @@ export default defineI18nConfig(() => ({
   detectBrowserLanguage: {
     useCookie: true,
     cookieKey: 'i18n_redirected',
+    redirectOn: 'root',
   },
 }));

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Hallo</p>
+    <p>{{ $t('welcome') }}</p>
   </div>
 </template>
 <script setup lang="ts"></script>

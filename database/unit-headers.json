@@ -1,0 +1,54 @@
+{
+  "headers": [
+    {
+      "title": "Troop",
+      "align": "start",
+      "key": "name"
+    },
+    {
+      "title": "Type",
+      "align": "center",
+      "key": "type"
+    },
+    {
+      "title": "Attacks",
+      "align": "center",
+      "key": "attack"
+    },
+    {
+      "title": "Hits",
+      "align": "center",
+      "key": "hits"
+    },
+    {
+      "title": "Armour",
+      "align": "center",
+      "key": "armour"
+    },
+    {
+      "title": "Command",
+      "align": "center",
+      "key": "command"
+    },
+    {
+      "title": "Unitsize",
+      "align": "center",
+      "key": "size"
+    },
+    {
+      "title": "Point per Unit",
+      "align": "center",
+      "key": "points"
+    },
+    {
+      "title": "Min",
+      "align": "center",
+      "key": "min"
+    },
+    {
+      "title": "Max",
+      "align": "center",
+      "key": "max"
+    }
+  ]
+}
