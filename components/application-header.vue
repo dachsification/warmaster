@@ -21,9 +21,11 @@
   </v-app-bar>
 </template>
 <script setup lang="ts">
-import Armies from '../database/armies-overview.json';
-const { t: $t } = useI18n();
-const armies = Armies.armies;
+import Armeen from '../locales/de.json';
+import Armies from '../locales/en.json';
+
+const { t: $t, locale } = useI18n();
+const armies = locale.value === 'en' ? Armies.armies : Armeen.armies;
 const rulesList = computed(() => [
   { title: $t('titles.englisch'), urlPath: '/rules/english-rules' },
   { title: $t('titles.german'), urlPath: '/rules/german-rules' },

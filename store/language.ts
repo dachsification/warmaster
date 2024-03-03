@@ -23,6 +23,10 @@ export const useLanguageStore = defineStore(
     return { language, languageLabel, changeLanguage, setLocale };
   },
   {
-    persist: true,
+    persist: {
+      storage: persistedState.cookiesWithOptions({
+        maxAge: 31536000,
+      }),
+    },
   },
 );
