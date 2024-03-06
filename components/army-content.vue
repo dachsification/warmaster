@@ -3,7 +3,6 @@
     <v-row justify="center">
       <v-col cols="auto">
         <h1>{{ factionTitle }}</h1>
-        <p>{{ props.armyKeyword }}</p>
       </v-col>
     </v-row>
     <v-row justify="center">

@@ -2,9 +2,9 @@
   <!-- open-on-hover does not properly work with v-menu -->
   <v-menu open-on-hover>
     <template #activator="{ props }">
-      <v-app-bar-nav-icon icon="mdi-cog" v-bind="props" />
+      <v-app-bar-nav-icon color="primary" icon="mdi-cog" v-bind="props" />
     </template>
-    <v-card min-width="300">
+    <v-card>
       <v-list>
         <v-list-item prepend-icon="mdi-account" :title="'locale'" :subtitle="'language'" />
       </v-list>

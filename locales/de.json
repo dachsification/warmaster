@@ -54,7 +54,7 @@
   "titles": {
     "test": "Test",
     "overview": "Übersicht",
-    "englisch": "Englisch",
+    "english": "Englisch",
     "german": "Deutsch",
     "iconic": "Iconic",
     "title": "Titel",
@@ -62,12 +62,14 @@
     "intro": "Einleitung",
     "list": "Armeeliste",
     "specialRules": "Sonderregeln",
-    "cookie": "Cookie Consent"
+    "cookie": "Cookie Consent",
+    "warmasterGermany": "Warmaster Germany"
   },
   "welcome": "Willkommen",
   "text": {
     "introduction": "Herzlich willkommen",
     "cookie": "This site uses cookies for your theme, your language choice and the concent of this banner. You can accept the use of these cookies with clicking of 'accept' or leave the Website.",
-    "legal": "This website is completely unofficial and in no way endorsed by Games Workshop Limited. All associated logos, marks, names, races, race insignia, characters, vehicles, locations, units, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2024, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners"
+    "legal": "This website is completely unofficial and in no way endorsed by Games Workshop Limited. All associated logos, marks, names, races, race insignia, characters, vehicles, locations, units, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2024, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners",
+    "mainSubtitle": "Eine Fanseite für das Tabletop Warmaster Revolution"
   }
 }

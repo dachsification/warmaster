@@ -2,11 +2,11 @@
   <!-- open-on-hover does not properly work with v-menu -->
   <v-menu>
     <template #activator="{ props }">
-      <v-btn v-bind="props" append-icon="mdi-menu-down" class="text-body-2">
+      <v-btn color="primary" v-bind="props" append-icon="mdi-menu-down">
         {{ label }}
       </v-btn>
     </template>
-    <v-card min-width="300">
+    <v-card>
       <v-list density="compact">
         <v-list-item v-for="item in data" :key="item.urlPath" :to="item.urlPath">
           <v-list-item-title>{{ item.title }}</v-list-item-title>

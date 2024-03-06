@@ -1,16 +1,16 @@
-import { createVuetify } from 'vuetify';
+import { createVuetify, type ThemeDefinition } from 'vuetify';
 import 'vuetify/styles';
 import '@mdi/font/css/materialdesignicons.css';
 import { useThemeStore } from '../store/theme';
 
-const customLightTheme = {
+const customLightTheme: ThemeDefinition = {
   dark: false,
   colors: {
-    background: '#f2f2f2',
-    surface: '#f2f2f2',
-    primary: '#f2f2f2',
-    text: '#212121',
-    secondary: '#03DAC6',
+    background: '#f1f3f2',
+    surface: '#D9DCD8',
+    primary: '#272424',
+    secondary: '#5D5C61',
+    //
     error: '#B00020',
     info: '#2196F3',
     success: '#4CAF50',
@@ -18,18 +18,19 @@ const customLightTheme = {
   },
 };
 
-const customDarkTheme = {
+const customDarkTheme: ThemeDefinition = {
   dark: true,
   colors: {
     background: '#121212',
-    surface: '#212121',
-    text: '#DADCE0',
-    primary: '#212121',
-    secondary: '#799cbf',
-    error: '#B00020',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#ff0800',
+    surface: '#282828',
+    primary: '#66fcf1',
+    secondary: '#C5C6C7',
+    //
+    primaryDarken: '#45A29E',
+    error: '#950740',
+    info: '#950740',
+    success: '#950740',
+    warning: '#950740',
   },
 };
 
