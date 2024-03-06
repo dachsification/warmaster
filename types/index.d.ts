@@ -9,9 +9,9 @@ declare global {
     armour: string | number;
     command: string | number;
     size: number;
-    points: string | number;
+    points: number;
     min: string | number;
     max: string | number;
-    special: any;
+    special: string;
   };
 }

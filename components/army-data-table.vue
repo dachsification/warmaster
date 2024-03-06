@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/valid-v-slot -->
 <template>
   <v-data-table
     v-model:expanded="expanded"
@@ -6,6 +7,7 @@
     :search="search"
     item-value="name"
     density="compact"
+    items-per-page="25"
     show-expand>
     <template #bottom />
     <template #top>
@@ -13,10 +15,13 @@
     </template>
     <template #expanded-row="{ columns, item }">
       <tr>
-        <td :colspan="columns.length">
-          {{ item?.special }}
-        </td>
+        <td :colspan="columns.length">{{ item?.special }}</td>
       </tr>
+    </template>
+    <template #item.data-table-expand="{ item, toggleExpand, internalItem }">
+      <v-btn flat @click="toggleExpand(internalItem)">
+        <v-icon v-if="item.special" icon="mdi-plus" />
+      </v-btn>
     </template>
   </v-data-table>
 </template>

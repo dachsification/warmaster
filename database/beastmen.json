@@ -14,17 +14,8 @@
       "points": 45,
       "min": 2,
       "max": "-",
-      "special": [
-        "Up to half of the total number of Beastherd/Herdkin units (rounded down) may be deployed as ambushers rather than be deployed at the start of the game. The ambushers must be deployed in groups up to 4 units. The number of Herdkin units in these groups may not exceed the number of Beastherd units.",
-        "",
-        "During the order movement sequence the Beastmen player nominates a point within dense terrain or on any base edge other than the enemy player‘s own table edge for every group of ambushing units he wants to deploy this turn. If the nominated point is in dense terrain it must be chosen that every stand of every unit within the group must be at least partially within the terrain.",
-        "",
-        "Each group of ambushing units is ordered with a brigade order. Treat the order as issued to the nominated point, and apply any modifiers for distance and enemy proximity, but ignore the penalties for dense terrain and command range. The character‘s command range is considered to extend over the entire tabletop when issuing an ambush order. If successful, place one stand, of one unit on the nominated spot and arrange the rest of the unit around it. Then place the remaining units of the ambushing group next to each other. Every unit must touch at least one stand of another unit form that ambushing group. The infiltrated unit cannot be placed so that it touches an enemy unit. Once deployed, orders can be given to the unit by the same character that gave the infiltration order if he is within his normal command range, the infiltrating unit is considered to have used its first order to deploy.",
-        "",
-        "If the ambush order is failed the ambushing group is not deployed and cannot ambush that turn, it can attempt to ambush in a subsequent turn at the same or a different place and at the same and different composition of units (distance, enemy within 20cm etc.) apply."
-      ]
+      "special": "Up to half of the total number of Beastherd/Herdkin units (rounded down) may be deployed as ambushers rather than be deployed at the start of the game. The ambushers must be deployed in groups up to 4 units. The number of Herdkin units in these groups may not exceed the number of Beastherd units. During the order movement sequence the Beastmen player nominates a point within dense terrain or on any base edge other than the enemy player's own table edge for every group of ambushing units he wants to deploy this turn. If the nominated point is in dense terrain it must be chosen that every stand of every unit within the group must be at least partially within the terrain. Each group of ambushing units is ordered with a brigade order. Treat the order as issued to the nominated point, and apply any modifiers for distance and enemy proximity, but ignore the penalties for dense terrain and command range. The character's command range is considered to extend over the entire tabletop when issuing an ambush order. If successful, place one stand, of one unit on the nominated spot and arrange the rest of the unit around it. Then place the remaining units of the ambushing group next to each other. Every unit must touch at least one stand of another unit form that ambushing group. The infiltrated unit cannot be placed so that it touches an enemy unit. Once deployed, orders can be given to the unit by the same character that gave the infiltration order if he is within his normal command range, the infiltrating unit is considered to have used its first order to deploy. If the ambush order is failed the ambushing group is not deployed and cannot ambush that turn, it can attempt to ambush in a subsequent turn at the same or a different place and at the same and different composition of units (distance, enemy within 20cm etc.) apply."
     },
-
     {
       "name": "Herdkin",
       "type": "Infantry",
@@ -36,15 +27,7 @@
       "points": 55,
       "min": 2,
       "max": "-",
-      "special": [
-        "Up to half of the total number of Beastherd/Herdkin units (rounded down) may be deployed as ambushers rather than be deployed at the start of the game. The ambushers must be deployed in groups up to 4 units. The number of Herdkin units in these groups may not exceed the number of Beastherd units.",
-        "",
-        "During the order movement sequence the Beastmen player nominates a point within dense terrain or on any base edge other than the enemy player‘s own table edge for every group of ambushing units he wants to deploy this turn. If the nominated point is in dense terrain it must be chosen that every stand of every unit within the group must be at least partially within the terrain.",
-        "",
-        "Each group of ambushing units is ordered with a brigade order. Treat the order as issued to the nominated point, and apply any modifiers for distance and enemy proximity, but ignore the penalties for dense terrain and command range. The character‘s command range is considered to extend over the entire tabletop when issuing an ambush order. If successful, place one stand, of one unit on the nominated spot and arrange the rest of the unit around it. Then place the remaining units of the ambushing group next to each other. Every unit must touch at least one stand of another unit form that ambushing group. The infiltrated unit cannot be placed so that it touches an enemy unit. Once deployed, orders can be given to the unit by the same character that gave the infiltration order if he is within his normal command range, the infiltrating unit is considered to have used its first order to deploy.",
-        "",
-        "If the ambush order is failed the ambushing group is not deployed and cannot ambush that turn, it can attempt to ambush in a subsequent turn at the same or a different place and at the same and different composition of units (distance, enemy within 20cm etc.) apply."
-      ]
+      "special": "Up to half of the total number of Beastherd/Herdkin units (rounded down) may be deployed as ambushers rather than be deployed at the start of the game. The ambushers must be deployed in groups up to 4 units. The number of Herdkin units in these groups may not exceed the number of Beastherd units. During the order movement sequence the Beastmen player nominates a point within dense terrain or on any base edge other than the enemy player's own table edge for every group of ambushing units he wants to deploy this turn. If the nominated point is in dense terrain it must be chosen that every stand of every unit within the group must be at least partially within the terrain. Each group of ambushing units is ordered with a brigade order. Treat the order as issued to the nominated point, and apply any modifiers for distance and enemy proximity, but ignore the penalties for dense terrain and command range. The character's command range is considered to extend over the entire tabletop when issuing an ambush order. If successful, place one stand, of one unit on the nominated spot and arrange the rest of the unit around it. Then place the remaining units of the ambushing group next to each other. Every unit must touch at least one stand of another unit form that ambushing group. The infiltrated unit cannot be placed so that it touches an enemy unit. Once deployed, orders can be given to the unit by the same character that gave the infiltration order if he is within his normal command range, the infiltrating unit is considered to have used its first order to deploy. If the ambush order is failed the ambushing group is not deployed and cannot ambush that turn, it can attempt to ambush in a subsequent turn at the same or a different place and at the same and different composition of units (distance, enemy within 20cm etc.) apply."
     },
     {
       "name": "Bestigors",
@@ -57,7 +40,7 @@
       "points": 75,
       "min": "-",
       "max": 2,
-      "special": false
+      "special": ""
     },
     {
       "name": "Minotaurs",
@@ -70,9 +53,7 @@
       "points": 80,
       "min": "-",
       "max": 2,
-      "special": [
-        "Minotaurs are subject for Bloodlust – they always use initiative to charge if possible and cannot be given orders instead. Minotaurs never use initiative to evade and must pursue or advance where possible. Also they are immune to terror."
-      ]
+      "special": "Minotaurs are subject for Bloodlust. They always use initiative to charge if possible and cannot be given orders instead. Minotaurs never use initiative to evade and must pursue or advance where possible. Also they are immune to terror."
     },
     {
       "name": "Centigors",
@@ -85,9 +66,7 @@
       "points": 75,
       "min": "-",
       "max": 2,
-      "special": [
-        "Centigors have a shooting range of only 15cm, however they can shoot all round - ie behind or to the side as well as to their front. Just measure the range from any stand edge either front, side or rear. Centigors can shoot at enemy charging them from any direction."
-      ]
+      "special": "Centigors have a shooting range of only 15cm, however they can shoot all round - ie behind or to the side as well as to their front. Just measure the range from any stand edge either front, side or rear. Centigors can shoot at enemy charging them from any direction."
     },
     {
       "name": "Chaos Hounds",
@@ -100,7 +79,7 @@
       "points": 40,
       "min": "-",
       "max": 6,
-      "special": false
+      "special": ""
     },
     {
       "name": "Tuskgor Chariots",
@@ -113,7 +92,7 @@
       "points": 95,
       "min": "-",
       "max": 4,
-      "special": false
+      "special": ""
     },
     {
       "name": "Dragon Ogres",
@@ -126,7 +105,7 @@
       "points": 230,
       "min": "-",
       "max": 1,
-      "special": ["Dragon Ogres are immune to terror."]
+      "special": "Dragon Ogres are immune to terror."
     },
     {
       "name": "Chaos Spawn",
@@ -139,13 +118,7 @@
       "points": 110,
       "min": "-",
       "max": 2,
-      "special": [
-        "Spawn units have -1 Command penalty if not part of a brigade that includes more non-Spawn units than Spawn units. Up to two Spawn units can be included in any brigade and do not count towards the maximum size of that brigade.",
-        "",
-        "Spawn units cause terror in combat - enemies suffer the -1 Combat modifier for fighting terrifying creatures. Spawn units cannot be driven back by shooting and never rolls for drive backs. Spawn units must pursue or advance if victorious in combat where it is permitted to do so.",
-        "",
-        "Spawn units have a shooting range of 15cm and can shoot to the side or behind as well as to the front. Just measure the range from any stand edge, front, side or rear. They can therefore shoot at any enemy charging them from any direction."
-      ]
+      "special": "Spawn units have -1 Command penalty if not part of a brigade that includes more non-Spawn units than Spawn units. Up to two Spawn units can be included in any brigade and do not count towards the maximum size of that brigade. Spawn units cause terror in combat - enemies suffer the -1 Combat modifier for fighting terrifying creatures. Spawn units cannot be driven back by shooting and never rolls for drive backs. Spawn units must pursue or advance if victorious in combat where it is permitted to do so. Spawn units have a shooting range of 15cm and can shoot to the side or behind as well as to the front. Just measure the range from any stand edge, front, side or rear. They can therefore shoot at any enemy charging them from any direction."
     },
     {
       "name": "Dragon Ogre Shaggoth",
@@ -158,11 +131,7 @@
       "points": 160,
       "min": "-",
       "max": 1,
-      "special": [
-        "Dragon Ogre Shaggoth must always be given a separate order. It cannot be brigaded with other troops even with other Shaggoths.",
-        "",
-        "Shaggoth has a great many hits, 8 in fact, which are almost impossible to inflict during even a fairly lengthy combat engagement. Because Shaggoths have so many hits we must consider the possibility of hurting the Dragon Ogre Shaggoth and reducing its effectiveness in subsequent turns. Therefore, if a Shaggoth has accumulated 5-7 hits by the end of the Shooting phase or Combat phase and is no longer engaged in combat it is deemed to have been badly hurt. Once a Shaggoth is badly hurt then all accumulated hits are discounted and its maximum Hits value and Attacks are halved for the rest of the battle (to 4 Hits and 4 Attacks). A Dragon Ogre Shaggoth causes terror in its enemies."
-      ]
+      "special": "Dragon Ogre Shaggoth must always be given a separate order. It cannot be brigaded with other troops even with other Shaggoths. Shaggoth has a great many hits, 8 in fact, which are almost impossible to inflict during even a fairly lengthy combat engagement. Because Shaggoths have so many hits we must consider the possibility of hurting the Dragon Ogre Shaggoth and reducing its effectiveness in subsequent turns. Therefore, if a Shaggoth has accumulated 5-7 hits by the end of the Shooting phase or Combat phase and is no longer engaged in combat it is deemed to have been badly hurt. Once a Shaggoth is badly hurt then all accumulated hits are discounted and its maximum Hits value and Attacks are halved for the rest of the battle (to 4 Hits and 4 Attacks). A Dragon Ogre Shaggoth causes terror in its enemies."
     },
     {
       "name": "Beastlord",
@@ -175,7 +144,7 @@
       "points": 125,
       "min": 1,
       "max": 1,
-      "special": false
+      "special": ""
     },
     {
       "name": "Doombull",
@@ -188,9 +157,7 @@
       "points": 80,
       "min": 1,
       "max": 1,
-      "special": [
-        "Causes Terror. Beastherd, Herdkin and Bestigors joined by a Doombull will become subject to Bloodlust in the same way as Minotaur units, until the end of the following command phase."
-      ]
+      "special": "Causes Terror. Beastherd, Herdkin and Bestigors joined by a Doombull will become subject to Bloodlust in the same way as Minotaur units, until the end of the following command phase."
     },
     {
       "name": "Wargor",
@@ -203,7 +170,7 @@
       "points": 80,
       "min": 1,
       "max": 1,
-      "special": false
+      "special": ""
     },
     {
       "name": "Bray Shaman",
@@ -216,7 +183,7 @@
       "points": 80,
       "min": 1,
       "max": 1,
-      "special": false
+      "special": ""
     },
     {
       "name": "Tuskgor Chariot",
@@ -226,15 +193,13 @@
       "armour": "-",
       "command": "-",
       "size": 1,
-      "points": "+10",
+      "points": 10,
       "min": "-",
       "max": 1,
-      "special": [
-        "Beastlord or Wargors can ride a Tuskgor Chariot. A character riding a chariot adds +1 to his Attacks."
-      ]
+      "special": "Beastlord or Wargors can ride a Tuskgor Chariot. A character riding a chariot adds +1 to his Attacks."
     }
   ],
-  "armyRules": ["Beastmen infantry do not suffer the usual -1 Command penalty when within woodland."],
+  "armyRules": "Beastmen infantry do not suffer the usual -1 Command penalty when within woodland.",
   "spells": [
     {
       "name": "Screaming Arrows",

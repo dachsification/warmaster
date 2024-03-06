@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row justify="center">
       <v-col cols="auto">
-        <h1>{{ factionTitle }}</h1>
+        <h1 class="text-primary">{{ factionTitle }}</h1>
       </v-col>
     </v-row>
     <v-row justify="center">

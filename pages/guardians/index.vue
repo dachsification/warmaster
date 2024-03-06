@@ -5,7 +5,7 @@
       <NuxtLink href="/pdfs/WMG_v2.pdf" target="_blank" download="WMG_v2.pdf">Guardians</NuxtLink>
       <p></p>
       <NuxtLink href="/pdfs/WMG_v2_printer-friendly.pdf" target="_blank" download="WMG_v2_printer-friendly.pdf"
-        >Guardians printer</NuxtLink
+        >Guardians printer friendly</NuxtLink
       >
     </v-col>
   </v-row>

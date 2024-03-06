@@ -6,7 +6,7 @@
     </template>
     <v-card>
       <v-list>
-        <v-list-item prepend-icon="mdi-account" :title="'locale'" :subtitle="'language'" />
+        <v-list-item prepend-icon="mdi-account" :title="user" :subtitle="faction" />
       </v-list>
       <v-divider />
       <v-list>
@@ -46,4 +46,7 @@ const items = computed(() => [
     action: toggleTheme,
   },
 ]);
+
+const user = ref('User');
+const faction = ref('Faction');
 </script>
