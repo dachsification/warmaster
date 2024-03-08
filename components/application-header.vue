@@ -1,51 +1,55 @@
 <template>
-  <v-app-bar>
-    <template v-if="!isMobile" #prepend>
-      <!-- <v-app-bar-title> -->
+  <v-app-bar v-if="isMobile">
+    <template #prepend>
+      <v-menu>
+        <template #activator="{ props }">
+          <v-btn color="primary" v-bind="props">
+            <v-icon icon="mdi-menu" />
+          </v-btn>
+        </template>
+        <v-card>
+          <v-list>
+            <header-menu-button :data="armies" :label="$t('labels.armies')" />
+            <header-menu-button :data="rulesList" :label="$t('labels.rules')" />
+            <header-basic-button
+              v-for="item in basicButtons"
+              :key="item.title"
+              :url-path="item.urlPath"
+              :label="item.title" />
+            <v-divider vertical class="mx-4" />
+          </v-list>
+        </v-card>
+      </v-menu>
+    </template>
+    <template #append>
+      <header-settings-button />
+    </template>
+  </v-app-bar>
+  <v-app-bar v-else>
+    <template #prepend>
       <nuxt-link to="/">
         <v-img width="300" :aspect-ratio="16 / 9" src="https://picsum.photos/300/150?random" alt="Logo" />
       </nuxt-link>
-      <!-- </v-app-bar-title> -->
     </template>
     <template #append>
-      <template v-if="isMobile">
-        <mobile-header-menu-button />
-      </template>
-      <template v-else>
-        <header-menu-button :data="armies" :label="$t('labels.armies')" />
-        <header-menu-button :data="rulesList" :label="$t('labels.rules')" />
-        <header-basic-button
-          v-for="item in basicButtons"
-          :key="item.title"
-          :url-path="item.urlPath"
-          :label="item.title" />
-        <v-divider vertical class="mx-4" />
-        <header-settings-button />
-      </template>
+      <header-menu-button :data="armies" :label="$t('labels.armies')" />
+      <header-menu-button :data="rulesList" :label="$t('labels.rules')" />
+      <header-basic-button
+        v-for="item in basicButtons"
+        :key="item.title"
+        :url-path="item.urlPath"
+        :label="item.title" />
+      <v-divider vertical class="mx-4" />
+      <header-settings-button />
     </template>
   </v-app-bar>
 </template>
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 
-const { mobile, name, width, thresholds, xs } = useDisplay();
+const { xs } = useDisplay();
 const isMobile = xs;
 const { t: $t } = useI18n();
-
-watch(
-  () => name.value,
-  () =>
-    console.log(
-      'name: ',
-      name.value,
-      'mobile: ',
-      mobile.value,
-      'width: ',
-      width.value,
-      'thresholds:',
-      thresholds.value,
-    ),
-);
 
 const armies = computed(() => [
   { title: $t('armies.tombKing'), urlPath: '/armies/tomb-kings-army' },

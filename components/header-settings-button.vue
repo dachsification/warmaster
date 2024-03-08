@@ -1,6 +1,6 @@
 <template>
   <!-- open-on-hover does not properly work with v-menu -->
-  <v-menu open-on-hover>
+  <v-menu>
     <template #activator="{ props }">
       <v-app-bar-nav-icon color="primary" icon="mdi-cog" v-bind="props" />
     </template>
