@@ -13,6 +13,9 @@
     <template #top>
       <v-text-field v-model="search" label="Search" />
     </template>
+    <template #item.specialIcon="{ value }">
+      <v-icon v-for="(icon, index) in value" :key="index" :icon="icon.name" />
+    </template>
     <template #expanded-row="{ columns, item }">
       <tr>
         <td :colspan="columns.length">{{ item?.special }}</td>

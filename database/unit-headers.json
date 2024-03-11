@@ -11,9 +11,14 @@
       "key": "type"
     },
     {
-      "title": "Attacks",
+      "title": "Melee Attacks",
       "align": "center",
-      "key": "attack"
+      "key": "meleeAttack"
+    },
+    {
+      "title": "Range Attacks",
+      "align": "center",
+      "key": "rangeAttack"
     },
     {
       "title": "Hits",
@@ -49,6 +54,11 @@
       "title": "Max",
       "align": "center",
       "key": "max"
+    },
+    {
+      "title": "Special",
+      "align": "center",
+      "key": "specialIcon"
     }
   ]
 }

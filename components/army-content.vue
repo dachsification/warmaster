@@ -17,7 +17,7 @@
 </template>
 <script setup lang="ts">
 import TombKings from '../database/tomb-kings.json';
-import Beastmen from '../database/beastmen.json';
+// import Beastmen from '../database/beastmen.json';
 import FallbackArmy from '../database/fallback-army.json';
 
 const props = defineProps<{ armyKeyword: string }>();
@@ -25,15 +25,15 @@ const factionTitle = props.armyKeyword.replace('-', ' ').toUpperCase();
 
 // Armies
 const tombKingArmy = TombKings;
-const beastmenArmy = Beastmen;
+// const beastmenArmy = Beastmen;
 
 // Faction-Switch-Case
 const faction = computed(() => {
   switch (props.armyKeyword.toLowerCase()) {
     case 'tomb-kings':
       return tombKingArmy;
-    case 'beastmen':
-      return beastmenArmy;
+    // case 'beastmen':
+    //   return beastmenArmy;
     default:
       return FallbackArmy;
   }
