@@ -1,121 +1,113 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="4">
+      <v-col cols="3">
         <v-select
-          v-model="select"
+          v-model="selectArmy"
           label="Select Army"
           :items="armies"
           item-title="title"
           item-value="title"
-          variant="solo" />
+          variant="solo"
+        />
+      </v-col>
+      <v-col cols="3">
+        <v-select
+          v-model="selectPoints"
+          label="Select Points"
+          :items="points"
+          variant="solo"
+        />
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col cols="auto">
-        <v-data-table :headers="headers" :items="items" :search="search" item-value="name">
-          <template #top>
-            <v-text-field v-model="search" label="Search" />
-          </template>
+        <v-text-field
+          variant="plain"
+          readonly
+          :model-value="`${counter} / ${selectPoints}`"
+          class="centered-input"
+          style="min-width: 100px"
+        />
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="auto">
+        <v-data-table
+          :headers="headers"
+          :items="units"
+          density="compact"
+          item-value="name"
+          items-per-page="25"
+          @click:row="addItem"
+        >
+          <template #bottom />
         </v-data-table>
       </v-col>
+    </v-row>
+    <v-row>
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in armyList"
+          :key="index"
+          v-model="armyList"
+        >
+          {{ item.name }} - {{ item.points }}</v-list-item
+        >
+      </v-list>
     </v-row>
   </v-container>
 </template>
 <script setup lang="ts">
 import Armies from '../../database/armies-overview.json';
-const armies = Armies.armies;
-const select = ref('');
-const search = ref('');
+import UnitHeaders from '../../database/unit-headers-calculator.json';
+import TombKings from '../../database/tomb-kings-calculator.json';
+import FallbackArmy from '../../database/fallback-army-calculator.json';
 const headers = ref();
-headers.value = [
-  {
-    title: 'Troop',
-    align: 'start',
-    key: 'troop',
-  },
-  {
-    title: 'Type',
-    align: 'end',
-    key: 'type',
-  },
-  {
-    title: 'Attacks',
-    align: 'end',
-    key: 'attacks',
-  },
-  {
-    title: 'Hits',
-    align: 'end',
-    key: 'hits',
-  },
-  {
-    title: 'Armour',
-    align: 'end',
-    key: 'armour',
-  },
-  {
-    title: 'Command',
-    align: 'end',
-    key: 'command',
-  },
-  {
-    title: 'Unitsize',
-    align: 'end',
-    key: 'unitsize',
-  },
-  {
-    title: 'Point per Unit',
-    align: 'end',
-    key: 'ppu',
-  },
-  {
-    title: 'Min/Max',
-    align: 'end',
-    key: 'minMax',
-  },
-  {
-    title: 'Special',
-    align: 'end',
-    key: 'special',
-  },
-];
+headers.value = UnitHeaders.headers;
+const armies = Armies.armies;
+const points = [1000, 1250, 1500, 2000];
+const selectArmy = ref('');
+const selectPoints = ref(1000);
+const armyList = ref<UnitForCalculator[]>([]);
 
-const items = ref([
-  {
-    name: 'Nebula GTX 3080',
-    image: '1.png',
-    price: 699.99,
-    rating: 5,
-    stock: true,
-  },
-  {
-    name: 'Galaxy RTX 3080',
-    image: '2.png',
-    price: 799.99,
-    rating: 4,
-    stock: false,
-  },
-  {
-    name: 'Orion RX 6800 XT',
-    image: '3.png',
-    price: 649.99,
-    rating: 3,
-    stock: true,
-  },
-  {
-    name: 'Vortex RTX 3090',
-    image: '4.png',
-    price: 1499.99,
-    rating: 4,
-    stock: true,
-  },
-  {
-    name: 'Cosmos GTX 1660 Super',
-    image: '5.png',
-    price: 299.99,
-    rating: 4,
-    stock: false,
-  },
-]);
+// Armies
+const tombKingArmy = TombKings;
+const counter = ref(0);
+
+// Faction-Switch-Case
+const faction = computed(() => {
+  switch (selectArmy.value.toLowerCase()) {
+    case 'tomb kings':
+      return tombKingArmy;
+    default:
+      return FallbackArmy;
+  }
+});
+
+const units = ref();
+
+watch(
+  () => faction.value,
+  () => (units.value = faction.value.units),
+);
+
+function addItem(event: PointerEvent, row: any) {
+  console.log(event);
+  armyList.value.push(row.item);
+  counter.value += row.item.points;
+}
 </script>
+<style scoped>
+.centered-input :deep(input) {
+  text-align: center;
+}
+
+.v-table :deep(th) {
+  padding: 0px 8px !important;
+}
+
+.v-table :deep(td) {
+  padding: 0px 8px !important;
+}
+</style>

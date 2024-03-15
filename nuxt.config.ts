@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       title: 'Warmaster Germany',
       meta: [
         {
-          name: 'test',
+          name: 'Warmaster Germany',
           content: 'Warmaster Fansite',
         },
       ],

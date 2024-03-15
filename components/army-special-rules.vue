@@ -8,7 +8,12 @@
     <v-col cols="auto">
       <v-card flat>
         <v-card-title class="text-primaryDarken mb-5">{{ armyRuleTitle }}</v-card-title>
-        <v-card-text v-for="(item, index) in armyRules" :key="index"> {{ item }}</v-card-text>
+        <v-card-text
+          v-for="(item, index) in armyRules"
+          :key="index"
+        >
+          {{ item }}</v-card-text
+        >
       </v-card>
     </v-col>
   </v-row>

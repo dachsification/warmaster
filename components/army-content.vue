@@ -6,12 +6,15 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="10">
+      <v-col cols="auto">
         <army-data-table :units="units" />
       </v-col>
     </v-row>
     <template v-if="armyRules">
-      <army-special-rules :army-rule-title="armyRuleTitle" :army-rules="armyRules" />
+      <army-special-rules
+        :army-rule-title="armyRuleTitle"
+        :army-rules="armyRules"
+      />
     </template>
   </v-container>
 </template>

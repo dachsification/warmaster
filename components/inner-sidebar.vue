@@ -7,7 +7,8 @@
         v-bind="$attrs"
         :active="false"
         clipped
-        :to="item.urlPath">
+        :to="item.urlPath"
+      >
         {{ item.title }}
       </v-list-item>
     </v-list>
