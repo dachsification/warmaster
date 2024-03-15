@@ -1,7 +1,20 @@
 <template>
-  <v-dialog v-model="cookieBanner" max-width="400" persistent>
-    <v-card append-icon="mdi-cookie" :text="$t('text.cookie')" :title="$t('titles.cookie')">
-      <v-btn color="green" @click="acceptCookieBanner"> {{ $t('labels.accept') }} </v-btn>
+  <v-dialog
+    v-model="cookieBanner"
+    max-width="400"
+    persistent
+  >
+    <v-card
+      append-icon="mdi-cookie"
+      :text="$t('text.cookie')"
+      :title="$t('titles.cookie')"
+    >
+      <v-btn
+        color="green"
+        @click="acceptCookieBanner"
+      >
+        {{ $t('labels.accept') }}
+      </v-btn>
     </v-card>
   </v-dialog>
 </template>

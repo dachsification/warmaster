@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/valid-v-slot -->
 <template>
   <v-data-table
     v-model:expanded="expanded"
@@ -8,13 +7,21 @@
     item-value="name"
     density="compact"
     items-per-page="25"
-    show-expand>
+    show-expand
+  >
     <template #bottom />
     <template #top>
-      <v-text-field v-model="search" label="Search" />
+      <v-text-field
+        v-model="search"
+        label="Search"
+      />
     </template>
     <template #item.specialIcon="{ value }">
-      <v-icon v-for="(icon, index) in value" :key="index" :icon="icon.name" />
+      <v-icon
+        v-for="(icon, index) in value"
+        :key="index"
+        :icon="icon.name"
+      />
     </template>
     <template #expanded-row="{ columns, item }">
       <tr>
@@ -22,8 +29,12 @@
       </tr>
     </template>
     <template #item.data-table-expand="{ item, toggleExpand, internalItem }">
-      <v-btn flat @click="toggleExpand(internalItem)">
-        <v-icon v-if="item.special" icon="mdi-plus" />
+      <v-btn
+        v-if="item.special"
+        flat
+        @click="toggleExpand(internalItem)"
+      >
+        <v-icon icon="mdi-plus" />
       </v-btn>
     </template>
   </v-data-table>
@@ -36,3 +47,12 @@ headers.value = UnitHeaders.headers;
 const expanded = ref([]);
 const search = ref('');
 </script>
+<style scoped>
+.v-table :deep(th) {
+  padding: 0px 8px !important;
+}
+
+.v-table :deep(td) {
+  padding: 0px 8px !important;
+}
+</style>

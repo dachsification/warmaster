@@ -2,15 +2,27 @@
   <!-- open-on-hover does not properly work with v-menu -->
   <v-menu>
     <template #activator="{ props }">
-      <v-app-bar-nav-icon color="primary" icon="mdi-cog" v-bind="props" />
+      <v-app-bar-nav-icon
+        color="primary"
+        icon="mdi-cog"
+        v-bind="props"
+      />
     </template>
     <v-card>
       <v-list>
-        <v-list-item prepend-icon="mdi-account" :title="user" :subtitle="faction" />
+        <v-list-item
+          prepend-icon="mdi-account"
+          :title="user"
+          :subtitle="faction"
+        />
       </v-list>
       <v-divider />
       <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index" @click="item.action">
+        <v-list-item
+          v-for="(item, index) in items"
+          :key="index"
+          @click="item.action"
+        >
           <template #prepend>
             <v-icon :icon="item.icon"></v-icon>
           </template>

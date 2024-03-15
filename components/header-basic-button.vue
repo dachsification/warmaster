@@ -1,5 +1,11 @@
 <template>
-  <v-btn color="primary" :to="urlPath" :active="false"> {{ label }} </v-btn>
+  <v-btn
+    color="primary"
+    :to="urlPath"
+    :active="false"
+  >
+    {{ label }}
+  </v-btn>
 </template>
 <script setup lang="ts">
 withDefaults(
