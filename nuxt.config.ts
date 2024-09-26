@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  css: ['/css/main.css'],
+
   devtools: { enabled: true },
 
   modules: [

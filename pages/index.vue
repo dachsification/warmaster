@@ -7,7 +7,6 @@
       <v-col cols="auto">
         <v-img
           src="https://picsum.photos/300/150?random"
-          role="img"
           style="width: 400px; height: 200px; max-width: 100%"
           alt="Logo"
         />
