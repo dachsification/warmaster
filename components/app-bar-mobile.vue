@@ -30,12 +30,24 @@
         </v-card>
       </v-menu>
     </template>
+    <nuxt-link to="/">
+      <v-img
+        v-if="!isTiny"
+        width="300"
+        :aspect-ratio="16 / 9"
+        src="https://picsum.photos/300/150?random"
+        alt="Logo"
+      />
+    </nuxt-link>
     <template #append>
       <header-settings-button />
     </template>
   </v-app-bar>
 </template>
 <script setup lang="ts">
+import { useDisplay } from 'vuetify';
+const { width } = useDisplay();
+const isTiny = computed(() => width.value <= 440);
 const { t: $t } = useI18n();
 const armies = computed(() => [
   { title: $t('armies.tombKing'), urlPath: '/armies/tomb-kings-army' },
@@ -76,6 +88,7 @@ const basicButtons = computed(() => [
   { title: $t('labels.learn'), urlPath: '/get-started' },
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
+  { title: $t('labels.tournaments'), urlPath: '/tournaments' },
   { title: $t('labels.about'), urlPath: '/about' },
 ]);
 </script>

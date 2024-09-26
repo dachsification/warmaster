@@ -5,5 +5,5 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 const { width } = useDisplay();
-const isMobile = computed(() => width.value <= 800);
+const isMobile = computed(() => width.value <= 960);
 </script>
