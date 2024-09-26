@@ -14,9 +14,9 @@
           />
         </nuxt-link>
       </v-col>
-      <v-spacer></v-spacer>
+      <v-spacer />
       <v-col
-        cols="6"
+        cols="8"
         align="center"
       >
         <header-menu-button
@@ -34,9 +34,9 @@
           :label="item.title"
         />
       </v-col>
-      <v-spacer></v-spacer>
+      <v-spacer />
       <v-col
-        cols="2"
+        cols="1"
         align="end"
         class="mr-6"
       >
@@ -87,6 +87,5 @@ const basicButtons = computed(() => [
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
   { title: $t('labels.tournaments'), urlPath: '/tournaments' },
-  { title: $t('labels.about'), urlPath: '/about' },
 ]);
 </script>

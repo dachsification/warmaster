@@ -29,6 +29,15 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
+      <v-divider />
+      <v-list>
+        <v-list-item
+          prepend-icon="mdi-chat-question"
+          :title="$t('labels.about')"
+          :active="false"
+          to="/about"
+        />
+      </v-list>
     </v-card>
   </v-menu>
 </template>
@@ -37,6 +46,8 @@
 import { useTheme } from 'vuetify';
 import { useThemeStore } from '../store/theme';
 import { useLanguageStore } from '../store/language';
+
+const { t: $t } = useI18n();
 
 const languageStore = useLanguageStore();
 const { languageLabel } = storeToRefs(languageStore);

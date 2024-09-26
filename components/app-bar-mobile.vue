@@ -46,9 +46,12 @@
 </template>
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
+
 const { width } = useDisplay();
-const isTiny = computed(() => width.value <= 440);
+const isTiny = computed(() => width.value <= 460);
+
 const { t: $t } = useI18n();
+
 const armies = computed(() => [
   { title: $t('armies.tombKing'), urlPath: '/armies/tomb-kings-army' },
   { title: $t('armies.albion'), urlPath: '/armies/albion-army' },
@@ -89,6 +92,5 @@ const basicButtons = computed(() => [
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
   { title: $t('labels.tournaments'), urlPath: '/tournaments' },
-  { title: $t('labels.about'), urlPath: '/about' },
 ]);
 </script>
