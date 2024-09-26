@@ -14,7 +14,7 @@ export const useLanguageStore = defineStore(
         setLocale(language.value);
       } else {
         language.value = 'de';
-        languageLabel.value = 'Englisch';
+        languageLabel.value = 'English';
         setLocale(language.value);
       }
       return { language, languageLabel, setLocale };
