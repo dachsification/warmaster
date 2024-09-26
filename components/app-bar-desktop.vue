@@ -86,6 +86,7 @@ const basicButtons = computed(() => [
   { title: $t('labels.learn'), urlPath: '/get-started' },
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
+  { title: $t('labels.tournaments'), urlPath: '/tournaments' },
   { title: $t('labels.about'), urlPath: '/about' },
 ]);
 </script>
