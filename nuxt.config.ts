@@ -4,11 +4,14 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+
   typescript: {
     typeCheck: true,
     strict: true,
   },
+
   devtools: { enabled: true },
+
   modules: [
     ['@nuxtjs/eslint-module', { fix: true }],
     '@vueuse/nuxt',
@@ -22,6 +25,7 @@ export default defineNuxtConfig({
       });
     },
   ],
+
   i18n: {
     vueI18n: './i18n.config.ts',
     detectBrowserLanguage: {
@@ -29,6 +33,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n',
     },
   },
+
   app: {
     head: {
       title: 'Warmaster Germany',
@@ -40,6 +45,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   vite: {
     vue: {
       template: {
@@ -47,4 +53,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-09-26',
 });
