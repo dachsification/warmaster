@@ -1,10 +1,7 @@
 <template>
   <v-app-bar>
     <v-row align="center">
-      <v-col
-        cols="2"
-        class="ml-6"
-      >
+      <v-col class="ml-6">
         <nuxt-link to="/">
           <v-img
             width="300"
@@ -36,7 +33,6 @@
       </v-col>
       <v-spacer />
       <v-col
-        cols="1"
         align="end"
         class="mr-6"
       >

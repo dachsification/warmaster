@@ -7,59 +7,58 @@
     },
     {
       "title": "Type",
-      "align": "center",
+      "align": "start",
       "key": "type"
     },
     {
-      "title": "Melee Attacks",
-      "align": "center",
+      "title": "Melee",
+      "align": "start",
       "key": "meleeAttack"
     },
     {
-      "title": "Range Attacks",
-      "align": "center",
+      "title": "Range",
+      "align": "start",
       "key": "rangeAttack"
     },
     {
       "title": "Hits",
-      "align": "center",
+      "align": "start",
       "key": "hits"
     },
     {
       "title": "Armour",
-      "align": "center",
+      "align": "start",
       "key": "armour"
     },
     {
       "title": "Command",
-      "align": "center",
+      "align": "start",
       "key": "command"
     },
     {
       "title": "Unitsize",
-      "align": "center",
+      "align": "start",
       "key": "size"
     },
     {
       "title": "Point per Unit",
-      "align": "center",
+      "align": "start",
       "key": "points"
     },
     {
       "title": "Min",
-      "align": "center",
+      "align": "start",
       "key": "min"
     },
     {
       "title": "Max",
-      "align": "center",
+      "align": "start",
       "key": "max"
     },
     {
       "title": "Special",
-      "align": "center",
-      "key": "specialIcon",
-      "sortable": false
+      "align": "start",
+      "key": "data-table-expand"
     }
   ]
 }

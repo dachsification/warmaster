@@ -12,7 +12,6 @@
       "points": 30,
       "min": 2,
       "max": "-",
-      "specialIcon": [{ "name": "" }],
       "special": ""
     },
     {
@@ -26,7 +25,6 @@
       "points": 45,
       "min": 2,
       "max": "-",
-      "specialIcon": [{ "name": "" }],
       "special": ""
     },
     {
@@ -40,7 +38,6 @@
       "points": 60,
       "min": "-",
       "max": "-",
-      "specialIcon": [{ "name": "" }],
       "special": ""
     },
     {
@@ -54,7 +51,6 @@
       "points": 110,
       "min": "-",
       "max": 3,
-      "specialIcon": [{ "name": "" }],
       "special": ""
     },
     {
@@ -68,7 +64,6 @@
       "points": 65,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "Carrion can fly. Note that Carrion can always return to a character by homing back at the start of the Command phase. No order is required to do this."
     },
     {
@@ -82,7 +77,6 @@
       "points": 110,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "Bone Giants cause terror. When a Tomb King gives an order to a Bone Giant or a brigade that contains a Bone Giant there is a -1 Command penalty. There is no penalty when a Liche-Priest gives an order."
     },
     {
@@ -96,7 +90,6 @@
       "points": 135,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "Because the Sphinx has so many hits (6) we must consider the possibility of hurting the Sphinx and reducing its effectiveness in subsequent turns. Therefore, if a Sphinx has accumulated 4-5 hits by the end of the Shooting phase or Combat phase and is no longer engaged in combat it is deemed to have been badly hurt. Once a Sphinx is badly hurt all accumulated hits are discounted and its maximum Hits and Attacks are halved for the rest of the battle (to 3 Hits and 2 Attacks). The Sphinx causes terror."
     },
     {
@@ -110,7 +103,6 @@
       "points": 85,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "The Skull Chukka is a Stone Thrower but with the following additional rule. When a unit is driven back as a result of hits scored by a Skull Chukka, then any dice rolled in respect to those hits will cause Confusion on the roll of 4, 5 or 6 (rather than 6 as normal). Note that if a unit has taken other hits as well it will be necessary to roll the Skull Chukka dice separately. See the Artillery and Machines section of the rulebook for the Stone Thrower rules."
     },
     {
@@ -124,7 +116,6 @@
       "points": 65,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "Regeln fehlen noch"
     },
     {
@@ -138,7 +129,6 @@
       "points": 130,
       "min": 1,
       "max": 1,
-      "specialIcon": [{ "name": "mdi-coffin" }, { "name": "mdi-skull" }, { "name": "mdi-chess-king" }],
       "special": "The Tomb King is empowered by the spells cast upon him when buried. He can use this power to increase the Combat Attacks value of all the stands in one unit within 20cm by+1 for the duration of one Combat phase. This ability can only be used once per battle."
     },
     {
@@ -152,7 +142,6 @@
       "points": 90,
       "min": "-",
       "max": 2,
-      "specialIcon": [{ "name": "mdi-magic-staff" }],
       "special": ""
     },
     {
@@ -166,7 +155,6 @@
       "points": 100,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "A Tomb King or Liche Priest can ride a Zombie Dragon. A Dragon can fly increasing its rider's move from 60 to 100cm and it adds +3 Attacks to those of its rider. Zombie Dragons have a special shooting attack - they can belch corrosive breath! This attack can only be used if the Dragon riding character has joined a unit but is not engaged in combat. A character that has not joined a unit cannot use the Breath attack. The corrosive breath has a range of 20cm. It can be directed against one target as normal and has 3 Attacks worked out in the usual way. The Zombie Dragon is a terrifying creature - a unit that has been joined by a Dragon riding character causes terror in its enemies."
     },
     {
@@ -180,7 +168,6 @@
       "points": 10,
       "min": "-",
       "max": 1,
-      "specialIcon": [{ "name": "" }],
       "special": "A Tomb King or Liche priest can ride a chariot. A character riding a chariot adds +1 to his Attacks."
     }
   ]

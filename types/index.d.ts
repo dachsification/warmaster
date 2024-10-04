@@ -12,7 +12,6 @@ declare global {
     points: number;
     min: string | number;
     max: string | number;
-    specialIcon: { name: string }[];
     special: string;
   };
 
@@ -28,7 +27,6 @@ declare global {
     points: number;
     min: string | number;
     max: string | number;
-    specialIcon: { name: string }[];
     special: string;
   };
 }

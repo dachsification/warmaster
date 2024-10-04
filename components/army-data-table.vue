@@ -8,6 +8,7 @@
     density="compact"
     items-per-page="25"
     show-expand
+    align="center"
   >
     <template #bottom />
     <template #top>
@@ -16,16 +17,14 @@
         label="Search"
       />
     </template>
-    <template #item.specialIcon="{ value }">
-      <v-icon
-        v-for="(icon, index) in value"
-        :key="index"
-        :icon="icon.name"
-      />
-    </template>
     <template #expanded-row="{ columns, item }">
       <tr>
-        <td :colspan="columns.length">{{ item?.special }}</td>
+        <td
+          :colspan="columns.length"
+          :width="columns.length"
+        >
+          {{ item?.special }}
+        </td>
       </tr>
     </template>
     <template #item.data-table-expand="{ item, toggleExpand, internalItem }">
