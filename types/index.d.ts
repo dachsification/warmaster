@@ -2,17 +2,16 @@ export { Unit };
 
 declare global {
   type UnitForCalculator = {
+    quantity: number;
     name: string;
-    type: string;
-    attacks: string | number;
-    hits: string | number;
-    armour: string | number;
-    command: string | number;
-    size: number;
     points: number;
     min: string | number;
     max: string | number;
-    special: string;
+  };
+
+  type FactionForCalculator = {
+    name: string;
+    units: UnitForCalculator[];
   };
 
   type Unit = {
@@ -28,5 +27,13 @@ declare global {
     min: string | number;
     max: string | number;
     special: string;
+  };
+
+  type Faction = {
+    name: string;
+    armyRuleTitle: string;
+    units: [Unit];
+    armyRules: {};
+    spells: [{}];
   };
 }

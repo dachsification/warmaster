@@ -6,7 +6,7 @@
     {
       "name": "Troop-Name",
       "type": "Troop-Type",
-      "meleeAttack": 2,
+      "meleeAttack": 0,
       "rangeAttack": 0,
       "hits": 3,
       "armour": "Armour Value",

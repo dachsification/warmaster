@@ -71,6 +71,13 @@
       "urlPath": "/armies/lizardmen-army"
     },
     {
+      "title": "Dark Elves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/dark-elves-army"
+    },
+    {
       "title": "Bretonnia",
       "Rating": 1,
       "Complexity": 1,
