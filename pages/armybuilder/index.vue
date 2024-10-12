@@ -265,17 +265,16 @@ function addItem(_event: PointerEvent, row: any) {
   if (selectedArmySize.value) {
     const selectedUnit: UnitForCalculator = { ...row.item };
     if (armyList.value.length) {
-      const abc = armyList.value.find((a) => a.name === selectedUnit.name);
-      if (abc) {
+      const existingEntry = armyList.value.find((a) => a.name === selectedUnit.name);
+      if (existingEntry) {
         armyList.value.forEach((entry) => {
-          if (entry.name === abc.name && typeof entry.max === 'string') {
-            addExistingArmylistEntry(entry, selectedUnit.points);
-          } else if (
-            entry.name === abc.name &&
-            typeof entry.max === 'number' &&
-            isMax(entry.max, entry.quantity, entry.min)
-          ) {
-            addExistingArmylistEntry(entry, selectedUnit.points);
+          if (entry.name === existingEntry.name) {
+            if (typeof entry.max === 'number' && isMax(entry.max, entry.quantity, entry.min)) {
+              addExistingArmylistEntry(entry, selectedUnit.points);
+            }
+            if (typeof entry.max === 'string') {
+              addExistingArmylistEntry(entry, selectedUnit.points);
+            }
           }
         });
       } else addNewArmylistEntry(armyList.value, selectedUnit);
