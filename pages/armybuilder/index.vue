@@ -6,6 +6,7 @@
           v-model="selectedFaction"
           label="Select Army"
           :items="itemsForFactionSelect"
+          :disabled="disableSelectedFaction"
           item-title="title"
           item-value="title"
           variant="solo"
@@ -16,7 +17,9 @@
           v-model="selectedArmySize"
           label="Select Points"
           :items="itemsForPointSelect"
+          :disabled="disableSelectArmySize"
           variant="solo"
+          @update:model-value="addMinUnits"
         />
       </v-col>
     </v-row>
@@ -25,26 +28,14 @@
       justify="center"
       class="d-flex align-center"
     >
-      <v-col cols="2">
+      <v-col cols="auto">
         <v-text-field
           variant="plain"
           readonly
-          :model-value="`${currentPoints} / ${selectedArmySize}`"
+          :model-value="`${currentPoints} / ${selectedArmySize ? selectedArmySize : 'Maximum'}`"
           :class="`centered-input font-weight-bold ${currentPoints > selectedArmySize ? 'text-red' : 'text-black'}`"
           style="min-width: 100px"
         />
-      </v-col>
-      <v-col cols="2">
-        <v-btn
-          :disabled="disableButton"
-          block
-          @click="findMin"
-          >Add Min</v-btn
-        >
-      </v-col>
-      <v-col cols="2">
-        <p style="text-align: center">Min/Max Checker</p>
-        <v-btn @click="checkMinMax"></v-btn>
       </v-col>
     </v-row>
 
@@ -76,6 +67,11 @@
         </v-list>
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <v-col cols="auto">
+        <v-btn @click="reset"> Reset </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script setup lang="ts">
@@ -105,7 +101,6 @@ import Empire from '../../database/the-empire-calculator.json';
 // import Nippon from '../../database/nippon-calculator.json';
 // import Ror from '../../database/ror-calculator.json';
 // import ChaosDwarfs from '../../database/chaos-dwarfs-calculator.json';
-
 import FallbackArmy from '../../database/fallback-army-calculator.json';
 
 // Table Headers
@@ -132,12 +127,16 @@ const headers = ref([
   },
 ] as const);
 
-// Selects
+// Selects & Button
 const itemsForFactionSelect = Armies.armies;
-const itemsForPointSelect = [1000, 1250, 1500, 2000];
+const itemsForPointSelect = ['1000', '1250', '1500', '2000'];
 const selectedFaction = ref('');
-const selectedArmySize = ref(1000);
+const selectedArmySize = ref();
+const disableSelectArmySize = ref(true);
+const disableSelectedFaction = ref(false);
 
+// Points
+const currentPoints = ref(0);
 // Armeeliste
 const armyList = ref<UnitForCalculator[]>([]);
 
@@ -168,9 +167,6 @@ const empireArmy = Empire;
 // const rorArmy = Ror;
 // const chaosDwarfsArmy = ChaosDwarfs;
 
-// Points
-const currentPoints = ref(0);
-
 // Faction-Switch-Case to fill table
 const faction = computed(() => {
   switch (selectedFaction.value.toLowerCase()) {
@@ -178,208 +174,158 @@ const faction = computed(() => {
       return tombKingArmy.units;
     case 'the empire':
       return empireArmy.units;
-    // case 'wood elves':
-    //   return woodElvesArmy.units;
-    // case 'dark elves':
-    //   return darkElvesArmy.units;
-    // case 'wood elves':
-    //   return woodElvesArmy.units;
-    // case 'high elves':
-    //   return highElvesArmy.units;
-    // case 'chaos':
-    //   return chaosArmy.units;
-    // case 'dwarfs':
-    //   return dwarfsArmy.units;
-    // case 'skaven':
-    //   return skavenArmy.units;
-    // case 'lizardmen':
-    //   return lizardmenArmy.units;
-    // case 'bretonnia':
-    //   return bretonniaArmy.units;
-    // case 'daemons':
-    //   return daemonsArmy.units;
-    // case 'vampire':
-    //   return vampireArmy.units;
-    // case 'dogsOfWar':
-    //   return dogsOfWarArmy.units;
-    // case 'ogre':
-    //   return ogreArmy.units;
-    // case 'albion':
-    //   return albionArmy.units;
-    // case 'goblin':
-    //   return goblinArmy.units;
-    // case 'witchHunter':
-    //   return witchHunterArmy.units;
-    // case 'norse':
-    //   return norseArmy.units;
-    // case 'cathay':
-    //   return cathayArmy.units;
-    // case 'nippon':
-    //   return nipponArmy.units;
-    // case 'ror':
-    //   return rorArmy.units;
-    // case 'chaosDwarfs':
-    //   return chaosDwarfsArmy.units;
+    //     // case 'wood elves':
+    //     //   return woodElvesArmy.units;
+    //     // case 'dark elves':
+    //     //   return darkElvesArmy.units;
+    //     // case 'wood elves':
+    //     //   return woodElvesArmy.units;
+    //     // case 'high elves':
+    //     //   return highElvesArmy.units;
+    //     // case 'chaos':
+    //     //   return chaosArmy.units;
+    //     // case 'dwarfs':
+    //     //   return dwarfsArmy.units;
+    //     // case 'skaven':
+    //     //   return skavenArmy.units;
+    //     // case 'lizardmen':
+    //     //   return lizardmenArmy.units;
+    //     // case 'bretonnia':
+    //     //   return bretonniaArmy.units;
+    //     // case 'daemons':
+    //     //   return daemonsArmy.units;
+    //     // case 'vampire':
+    //     //   return vampireArmy.units;
+    //     // case 'dogsOfWar':
+    //     //   return dogsOfWarArmy.units;
+    //     // case 'ogre':
+    //     //   return ogreArmy.units;
+    //     // case 'albion':
+    //     //   return albionArmy.units;
+    //     // case 'goblin':
+    //     //   return goblinArmy.units;
+    //     // case 'witchHunter':
+    //     //   return witchHunterArmy.units;
+    //     // case 'norse':
+    //     //   return norseArmy.units;
+    //     // case 'cathay':
+    //     //   return cathayArmy.units;
+    //     // case 'nippon':
+    //     //   return nipponArmy.units;
+    //     // case 'ror':
+    //     //   return rorArmy.units;
+    //     // case 'chaosDwarfs':
+    //     //   return chaosDwarfsArmy.units;
     default:
       return FallbackArmy.units;
   }
 });
 
-// // // Selected Army
-// // const selectedArmy = ref<UnitForCalculator[]>([]);
-// // watch(
-// //   () => faction.value,
-// //   () => (selectedArmy.value = faction.value.units),
-// // );
-
 // Reset Points, Armylist and MinButton
 watch(
-  () => [selectedFaction.value, selectedArmySize.value],
+  () => selectedFaction.value,
   () => {
     currentPoints.value = 0;
-    disableButton.value = !selectedFaction.value;
     armyList.value = [];
-    minUnits.value = [];
+    disableSelectArmySize.value = false;
+    selectedArmySize.value = undefined;
   },
 );
 
-function addItem(_event: PointerEvent, row: any) {
-  currentPoints.value += row.item.points;
-  if (armyList.value.length) {
-    // armyList.value.find((e: UnitForCalculator) =>
-    //   row.item.name === e.name ? e.quantity++ : armyList.value.push(row.item),
-    // );
-    armyList.value.find((e: UnitForCalculator) => {
-      if (row.item.name === e.name) {
-        console.log('gefunden');
-        return e.quantity++;
-      } else {
-        console.log(row.item, 'nicht gefunden');
-        return armyList.value.push(row.item);
-      }
-    });
-
-    // armyList.value.find((e: UnitForCalculator) => {
-    //   if (row.item.name === e.name) {
-    //     return console.log('gefunden', row.item.name, '=', e.name);
-    //   }
-    //   return armyList.value.push(row.item);
-    // });
-    // console.log(armyList.value);
-    // const a = armyList.value.find((e: any) => e.name === row.item.name);
-    // if (armyList.value.find((e: any) => e.name === row.item.name)) {
-    //   armyList.value.find((e) => )
-    // } else armyList.value.push(row.item);
-  } else armyList.value.push(row.item);
+function isNotGeneral(min: number | string, max: number | string) {
+  return !(min === 1 && max === 1);
 }
 
-// function findDuplicate(name: string) {
-//   armyList.value.find();
-// }
-// if (armyList.value.length) {
-//   armyList.value.find(
-//     ({ name }) => name === 'Skeletons',
-//     // if (e.name === row.item.name) {
-//     //   return e.quantity++;
-//     // } else {
-//     //   console.log('e.name', e.name);
-//     //   console.log('armylist2', armyList.value);
-//     //   console.log('row.name', row.item.name);
-//     //   return armyList.value.push(row.item);
-//     // }
-//   );
-// } else {
-//   armyList.value.push(row.item);
-// }
+function addPoints(points: number) {
+  currentPoints.value += points;
+}
+
+function reducePoints(points: number) {
+  currentPoints.value -= points;
+}
+
+function addNewArmylistEntry(armylist: UnitForCalculator[], unit: UnitForCalculator) {
+  armylist.push(unit);
+  addPoints(unit.points);
+}
+
+function addExistingArmylistEntry(armylistEntry: UnitForCalculator, points: number) {
+  armylistEntry.quantity++;
+  armylistEntry.points += points;
+  addPoints(points);
+}
+
+function isMax(unitLimit: number, numberOfUnits: number, unitMin: number | string) {
+  if (selectedArmySize.value !== '2000') {
+    return numberOfUnits !== unitLimit;
+  } else return numberOfUnits !== unitLimit * 2 && isNotGeneral(unitMin, unitLimit);
+}
+
+function addItem(_event: PointerEvent, row: any) {
+  if (selectedArmySize.value) {
+    const selectedUnit: UnitForCalculator = { ...row.item };
+    if (armyList.value.length) {
+      const abc = armyList.value.find((a) => a.name === selectedUnit.name);
+      if (abc) {
+        armyList.value.forEach((entry) => {
+          if (entry.name === abc.name && typeof entry.max === 'string') {
+            addExistingArmylistEntry(entry, selectedUnit.points);
+          } else if (
+            entry.name === abc.name &&
+            typeof entry.max === 'number' &&
+            isMax(entry.max, entry.quantity, entry.min)
+          ) {
+            addExistingArmylistEntry(entry, selectedUnit.points);
+          }
+        });
+      } else addNewArmylistEntry(armyList.value, selectedUnit);
+    } else {
+      addNewArmylistEntry(armyList.value, selectedUnit);
+    }
+  }
+}
 
 function removeItem(index: number, item: UnitForCalculator) {
-  armyList.value.splice(index, 1);
-  currentPoints.value -= item.points;
+  const points = item.points / item.quantity;
+  if (typeof armyList.value[index].min === 'number') {
+    if (armyList.value[index].quantity > armyList.value[index].min) {
+      armyList.value[index].quantity--;
+      armyList.value[index].points -= points;
+      reducePoints(points);
+    }
+  } else if (armyList.value[index].quantity > 1) {
+    armyList.value[index].quantity--;
+    armyList.value[index].points -= points;
+    reducePoints(points);
+  } else {
+    armyList.value.splice(index, 1);
+    reducePoints(points);
+  }
 }
 
-function checkMinMax() {
-  const minUnit: any = [];
-  faction.value.forEach((unit: UnitForCalculator) => {
-    if (typeof unit.min === 'number') {
-      const a = { name: '', min: 0 };
-      a.name = unit.name;
-      a.min = unit.min;
-      minUnit.push(a);
+function reset() {
+  disableSelectedFaction.value = false;
+  disableSelectArmySize.value = true;
+  currentPoints.value = 0;
+  armyList.value = [];
+  selectedArmySize.value = undefined;
+  selectedFaction.value = '';
+}
+
+function addMinUnits(modelValue: any) {
+  disableSelectArmySize.value = true;
+  disableSelectedFaction.value = true;
+  const minUnitList = faction.value.filter((e) => typeof e.min === 'number').map((r) => ({ ...r }));
+  minUnitList.forEach((e) => {
+    if (typeof e.min === 'number') {
+      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * Number(modelValue.charAt(0)) : 1;
+      e.quantity *= requiredMin;
+      e.points *= requiredMin;
+      addPoints(e.points);
     }
   });
+  armyList.value = minUnitList;
 }
-const minUnits = ref();
-
-// findMin
-const disableButton = ref(true);
-function findMin() {
-  disableButton.value = true;
-  minUnits.value = faction.value.filter((e) => typeof e.min === 'number');
-  minUnits.value.forEach((e: any) => {
-    if (selectedArmySize.value < 2000) {
-      if (e.min === 2) {
-        e.points += e.points;
-        e.quantity += e.quantity;
-      } else if (e.min === 3) {
-        e.points += e.points;
-        e.points += e.points / 2;
-        e.quantity += e.quantity;
-        e.quantity += e.quantity - 1;
-      } else if (e.min === 4) {
-        e.points += e.points;
-        e.points += e.points;
-        e.quantity += e.quantity;
-        e.quantity += e.quantity;
-      }
-    } else if (e.min === 2) {
-      e.points += e.points;
-      e.points += e.points;
-      e.quantity += e.quantity;
-      e.quantity += e.quantity;
-    }
-  });
-  armyList.value = minUnits.value;
-
-  // faction.value.forEach((unit: UnitForCalculator) => {
-  //   if (selectedArmySize.value < 2000) {
-  //     if (unit.min === 1) {
-  //       addMinValues(1, unit);
-  //     } else if (unit.min === 2) {
-  //       addMinValues(2, unit);
-  //     } else if (unit.min === 3) {
-  //       addMinValues(3, unit);
-  //     } else return 0;
-  //   }
-  //   if (selectedArmySize.value === 2000) {
-  //     if (unit.min === 1) {
-  //       if (unit.max === 1) {
-  //         addMinValues(1, unit);
-  //       } else addMinValues(2, unit);
-  //     } else if (unit.min === 2) {
-  //       addMinValues(4, unit);
-  //     } else if (unit.min === 3) {
-  //       addMinValues(6, unit);
-  //     } else return 0;
-  //   }
-  // });
-}
-
-// function addMinValues(min: number, unit: UnitForCalculator) {
-//   for (let a = 0; a < min; a++) {
-//     if (armyList.value.find((e) => e.name === unit.name)) {
-//       armyList.value.forEach((a) => {
-//         if (a.name === unit.name) {
-//           a.points += unit.points;
-//           a.quantity++;
-//           currentPoints.value += unit.points;
-//         }
-//       });
-//     } else {
-//       armyList.value.push(unit);
-//       currentPoints.value += unit.points;
-//     }
-//   }
-// }
 </script>
 <style scoped>
 .centered-input :deep(input) {
