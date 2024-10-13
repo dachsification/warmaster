@@ -1,0 +1,117 @@
+{
+  "faction": "chaos dwarfs",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Chaos Dwarfs",
+      "points": 110,
+      "min": 2,
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Blunderbusses",
+      "points": 90,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Hobgoblins",
+      "points": 45,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Black Orcs",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Orc Slaves",
+      "points": 40,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Hobgoblin Wolf Riders",
+      "points": 75,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Bull Centaurs",
+      "points": 140,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Earthshaker Cannon",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Death Rocket",
+      "points": 60,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bolt Thrower",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Sorcerer",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Great Taurus",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Lammasu",
+      "points": 35,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Sorcerer Lord",
+      "points": 25,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

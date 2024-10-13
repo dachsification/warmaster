@@ -8,13 +8,6 @@
       "urlPath": "/armies"
     },
     {
-      "title": "Tomb Kings",
-      "Rating": 1,
-      "Complexity": 1,
-      "Fun": 1,
-      "urlPath": "/armies/tomb-kings-army"
-    },
-    {
       "title": "The Empire",
       "Rating": 1,
       "Complexity": 1,
@@ -22,11 +15,11 @@
       "urlPath": "/armies/the-empire-army"
     },
     {
-      "title": "Wood Elves",
+      "title": "Tomb Kings",
       "Rating": 1,
       "Complexity": 1,
       "Fun": 1,
-      "urlPath": "/armies/wood-elves-army"
+      "urlPath": "/armies/tomb-kings-army"
     },
     {
       "title": "Chaos",
@@ -71,13 +64,6 @@
       "urlPath": "/armies/lizardmen-army"
     },
     {
-      "title": "Dark Elves",
-      "Rating": 1,
-      "Complexity": 1,
-      "Fun": 1,
-      "urlPath": "/armies/dark-elves-army"
-    },
-    {
       "title": "Bretonnia",
       "Rating": 1,
       "Complexity": 1,
@@ -90,6 +76,13 @@
       "Complexity": 1,
       "Fun": 1,
       "urlPath": "/armies/kislev-army"
+    },
+    {
+      "title": "Dark Elves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/dark-elves-army"
     },
     {
       "title": "Daemons",
@@ -148,11 +141,18 @@
       "urlPath": "/armies/witch-hunters-army"
     },
     {
-      "title": "Chaos Dwarves",
+      "title": "Chaos Dwarfs",
       "Rating": 1,
       "Complexity": 1,
       "Fun": 1,
       "urlPath": "/armies/chaos-dwarves-army"
+    },
+    {
+      "title": "Wood Elves",
+      "Rating": 1,
+      "Complexity": 1,
+      "Fun": 1,
+      "urlPath": "/armies/wood-elves-army"
     },
     {
       "title": "Beastmen",

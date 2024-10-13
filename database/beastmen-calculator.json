@@ -1,0 +1,110 @@
+{
+  "faction": "beastmen",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Gor",
+      "points": 60,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Ungor",
+      "points": 45,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Bestigors",
+      "points": 75,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Minotaurs",
+      "points": 80,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Centigors",
+      "points": 75,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Chaos Hounds",
+      "points": 40,
+      "min": "-",
+      "max": 6
+    },
+    {
+      "quantity": 1,
+      "name": "Tuskgore Chariots",
+      "points": 95,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Dragon Ogres",
+      "points": 230,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Chaos Spawn",
+      "points": 110,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Dragon Ogre Shaggoth",
+      "points": 160,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Beastlord",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Doombull",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Wargor",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bray Shaman",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Tuskgor Chariot",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

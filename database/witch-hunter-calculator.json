@@ -1,0 +1,89 @@
+{
+  "faction": "witch hunters",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Zealots",
+      "points": 35,
+      "min": 3,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Halberdiers",
+      "points": 45,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Crossbowmen",
+      "points": 55,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Handgunners",
+      "points": 65,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Flagellants",
+      "points": 70,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Warhounds",
+      "points": 20,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Knights",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Pistoliers",
+      "points": 95,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Cannon",
+      "points": 85,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": " Hero",
+      "points": 80,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Warrior Priest",
+      "points": 55,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

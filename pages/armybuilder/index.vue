@@ -43,7 +43,7 @@
       <v-col cols="7">
         <v-data-table
           :headers="headers"
-          :items="faction"
+          :items="faction.units"
           density="compact"
           item-value="name"
           items-per-page="25"
@@ -78,30 +78,31 @@
 import Armies from '../../database/armies-overview.json';
 import TombKings from '../../database/tomb-kings-calculator.json';
 import Empire from '../../database/the-empire-calculator.json';
-// import WoodElves from '../../database/wood-elves-calculator.json';
-// import DarkElves from '../../database/dark-elves-calculator.json';
-// import HighElves from '../../database/high-elves-calculator.json';
-// import Chaos from '../../database/chaos-calculator.json';
-// import Orcs from '../../database/orcs-calculator.json';
-// import Dwarfs from '../../database/dwarfs-calculator.json';
-// import Skaven from '../../database/skaven-calculator.json';
-// import Lizardmen from '../../database/lizardmen-calculator.json';
-// import Bretonnia from '../../database/bretonnia-calculator.json';
-// import Kislev from '../../database/kislev-calculator.json';
-// import Daemons from '../../database/daemons-calculator.json';
-// import Vampire from '../../database/vampire-counts-calculator.json';
-// import DogsOfWar from '../../database/dogs-of-war-calculator.json';
-// import Ogre from '../../database/ogre-kingdom-calculator.json';
-// import Albion from '../../database/albion-calculator.json';
-// import Goblin from '../../database/goblin-calculator.json';
-// import WitchHunter from '../../database/witch-hunter-calculator.json';
-// import Beastmen from '../../database/beastmen-calculator.json';
-// import Norse from '../../database/norse-calculator.json';
-// import Cathay from '../../database/cathay-calculator.json';
-// import Nippon from '../../database/nippon-calculator.json';
-// import Ror from '../../database/ror-calculator.json';
-// import ChaosDwarfs from '../../database/chaos-dwarfs-calculator.json';
-import FallbackArmy from '../../database/fallback-army-calculator.json';
+import Araby from '../../database/araby-calculator.json';
+import WoodElves from '../../database/wood-elves-calculator.json';
+import DarkElves from '../../database/dark-elves-calculator.json';
+import HighElves from '../../database/high-elves-calculator.json';
+import Chaos from '../../database/chaos-calculator.json';
+import Orcs from '../../database/orcs-calculator.json';
+import Dwarfs from '../../database/dwarfs-calculator.json';
+import Skaven from '../../database/skaven-calculator.json';
+import Lizardmen from '../../database/lizardmen-calculator.json';
+import Bretonnia from '../../database/bretonnia-calculator.json';
+import Kislev from '../../database/kislev-calculator.json';
+import Daemons from '../../database/daemons-calculator.json';
+import Vampire from '../../database/vampire-counts-calculator.json';
+import DogsOfWar from '../../database/dogs-of-war-calculator.json';
+import Ogre from '../../database/ogre-kingdom-calculator.json';
+import Albion from '../../database/albion-calculator.json';
+import Goblin from '../../database/goblin-calculator.json';
+import WitchHunter from '../../database/witch-hunter-calculator.json';
+import Beastmen from '../../database/beastmen-calculator.json';
+import Norse from '../../database/norse-calculator.json';
+import Cathay from '../../database/cathay-calculator.json';
+import Nippon from '../../database/nippon-calculator.json';
+import Ror from '../../database/ror-calculator.json';
+import ChaosDwarfs from '../../database/chaos-dwarfs-calculator.json';
+import Fallback from '../../database/fallback-army-calculator.json';
 
 // Table Headers
 const headers = ref([
@@ -143,81 +144,89 @@ const armyList = ref<UnitForCalculator[]>([]);
 // Armies
 const tombKingArmy = TombKings;
 const empireArmy = Empire;
-// const woodElvesArmy = WoodElves;
-// const darkElvesArmy = DarkElves;
-// const highElvesArmy = HighElves;
-// const chaosArmy = Chaos;
-// const orcsArmy = Orcs;
-// const dwarfsArmy = Dwarfs;
-// const skavenArmy = Skaven;
-// const lizardmenArmy = Lizardmen;
-// const bretonniaArmy = Bretonnia;
-// const kislevArmy = Kislev;
-// const daemonsArmy = Daemons;
-// const vampireArmy = Vampire;
-// const dogsOfWarArmy = DogsOfWar;
-// const ogreArmy = Ogre;
-// const albionArmy = Albion;
-// const goblinArmy = Goblin;
-// const witchHunterArmy = WitchHunter;
-// const beastmenArmy = Beastmen;
-// const norseArmy = Norse;
-// const cathayArmy = Cathay;
-// const nipponArmy = Nippon;
-// const rorArmy = Ror;
-// const chaosDwarfsArmy = ChaosDwarfs;
+const arabyArmy = Araby;
+const woodElvesArmy = WoodElves;
+const darkElvesArmy = DarkElves;
+const highElvesArmy = HighElves;
+const chaosArmy = Chaos;
+const orcsArmy = Orcs;
+const dwarfsArmy = Dwarfs;
+const skavenArmy = Skaven;
+const lizardmenArmy = Lizardmen;
+const bretonniaArmy = Bretonnia;
+const kislevArmy = Kislev;
+const daemonsArmy = Daemons;
+const vampireArmy = Vampire;
+const dogsOfWarArmy = DogsOfWar;
+const ogreArmy = Ogre;
+const albionArmy = Albion;
+const goblinArmy = Goblin;
+const witchHunterArmy = WitchHunter;
+const beastmenArmy = Beastmen;
+const norseArmy = Norse;
+const cathayArmy = Cathay;
+const nipponArmy = Nippon;
+const rorArmy = Ror;
+const chaosDwarfsArmy = ChaosDwarfs;
+const FallbackArmy = Fallback;
 
 // Faction-Switch-Case to fill table
 const faction = computed(() => {
   switch (selectedFaction.value.toLowerCase()) {
     case 'tomb kings':
-      return tombKingArmy.units;
+      return tombKingArmy;
+    case 'araby':
+      return arabyArmy;
     case 'the empire':
-      return empireArmy.units;
-    //     // case 'wood elves':
-    //     //   return woodElvesArmy.units;
-    //     // case 'dark elves':
-    //     //   return darkElvesArmy.units;
-    //     // case 'wood elves':
-    //     //   return woodElvesArmy.units;
-    //     // case 'high elves':
-    //     //   return highElvesArmy.units;
-    //     // case 'chaos':
-    //     //   return chaosArmy.units;
-    //     // case 'dwarfs':
-    //     //   return dwarfsArmy.units;
-    //     // case 'skaven':
-    //     //   return skavenArmy.units;
-    //     // case 'lizardmen':
-    //     //   return lizardmenArmy.units;
-    //     // case 'bretonnia':
-    //     //   return bretonniaArmy.units;
-    //     // case 'daemons':
-    //     //   return daemonsArmy.units;
-    //     // case 'vampire':
-    //     //   return vampireArmy.units;
-    //     // case 'dogsOfWar':
-    //     //   return dogsOfWarArmy.units;
-    //     // case 'ogre':
-    //     //   return ogreArmy.units;
-    //     // case 'albion':
-    //     //   return albionArmy.units;
-    //     // case 'goblin':
-    //     //   return goblinArmy.units;
-    //     // case 'witchHunter':
-    //     //   return witchHunterArmy.units;
-    //     // case 'norse':
-    //     //   return norseArmy.units;
-    //     // case 'cathay':
-    //     //   return cathayArmy.units;
-    //     // case 'nippon':
-    //     //   return nipponArmy.units;
-    //     // case 'ror':
-    //     //   return rorArmy.units;
-    //     // case 'chaosDwarfs':
-    //     //   return chaosDwarfsArmy.units;
+      return empireArmy;
+    case 'beastmen':
+      return beastmenArmy;
+    case 'kislev':
+      return kislevArmy;
+    case 'wood elves':
+      return woodElvesArmy;
+    case 'dark elves':
+      return darkElvesArmy;
+    case 'orcs':
+      return orcsArmy;
+    case 'high elves':
+      return highElvesArmy;
+    case 'chaos':
+      return chaosArmy;
+    case 'dwarfs':
+      return dwarfsArmy;
+    case 'skaven':
+      return skavenArmy;
+    case 'lizardmen':
+      return lizardmenArmy;
+    case 'bretonnia':
+      return bretonniaArmy;
+    case 'daemons':
+      return daemonsArmy;
+    case 'vampire counts':
+      return vampireArmy;
+    case 'dogs of war':
+      return dogsOfWarArmy;
+    case 'ogre kingdoms':
+      return ogreArmy;
+    case 'albion':
+      return albionArmy;
+    case 'goblins':
+      return goblinArmy;
+    case 'witch hunters':
+      return witchHunterArmy;
+    case 'norse':
+      return norseArmy;
+    case 'cathay':
+      return cathayArmy;
+    case 'nippon':
+      return nipponArmy;
+    case 'ror':
+      return rorArmy;
+    case 'chaos dwarfs':
+      return chaosDwarfsArmy;
     default:
-      return FallbackArmy.units;
+      return FallbackArmy;
   }
 });
 
@@ -314,17 +323,60 @@ function reset() {
 function addMinUnits(modelValue: any) {
   disableSelectArmySize.value = true;
   disableSelectedFaction.value = true;
-  const minUnitList = faction.value.filter((e) => typeof e.min === 'number').map((r) => ({ ...r }));
+  const armysizeMultiplier = Number(modelValue.charAt(0));
+  const minUnitList = faction.value.units.filter((e) => typeof e.min === 'number').map((r) => ({ ...r }));
   minUnitList.forEach((e) => {
     if (typeof e.min === 'number') {
-      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * Number(modelValue.charAt(0)) : 1;
+      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * armysizeMultiplier : 1;
       e.quantity *= requiredMin;
       e.points *= requiredMin;
       addPoints(e.points);
     }
   });
   armyList.value = minUnitList;
+  findStupidRule(armysizeMultiplier, armyList.value);
 }
+function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
+  const stupidArmiesWithStupidRule = ['the empire', 'dwarfs', 'chaos dwarfs', 'dogs of war', 'cathay', 'goblins'];
+  const a = stupidArmiesWithStupidRule.includes(faction.value.faction);
+  const alarm = ref();
+  if (a) {
+    const stupidUnit = ref('');
+    if (selectedFaction.value === 'The Empire' || selectedFaction.value === 'Dogs of War') {
+      stupidUnit.value = 'Crossbowmen';
+    }
+    if (selectedFaction.value === 'Dwarfs') {
+      stupidUnit.value = 'Warriors';
+    }
+    if (selectedFaction.value === 'Goblins') {
+      stupidUnit.value = 'Goblins';
+      armySize *= 2;
+    }
+    if (selectedFaction.value === 'Chaos Dwarfs') {
+      stupidUnit.value = 'Chaos Dwarfs';
+    }
+    if (selectedFaction.value === 'Cathay') {
+      stupidUnit.value = 'Crossbows';
+    }
+    console.log(armySize);
+    minUnitList?.forEach((e) => {
+      if (e.name === stupidUnit.value) {
+        e.quantity -= armySize;
+        // Unitpoints
+        // Armypoints
+      }
+    });
+    console.log(alarm);
+    // Warning for Min
+  } else console.log('nääääääää');
+}
+// Sonderregeln für:
+// Imperium - Handgunners für Crossbomen 2
+// Zwerge - Handgunners für warriors 2
+// DoW - Handgunners für Crossbomen 2
+// Goblins - Squig Herd für goblins 4 -2
+// Chaoszwerge - Blunderbusses für cd 2
+// Cathay - Handguns für crossbows 1 alle
 </script>
 <style scoped>
 .centered-input :deep(input) {

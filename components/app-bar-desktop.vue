@@ -44,6 +44,7 @@
 <script setup lang="ts">
 const { t: $t } = useI18n();
 const armies = computed(() => [
+  { title: $t('armies.all'), urlPath: '/armies/all-armies' },
   { title: $t('armies.tombKing'), urlPath: '/armies/tomb-kings-army' },
   { title: $t('armies.albion'), urlPath: '/armies/albion-army' },
   { title: $t('armies.araby'), urlPath: '/armies/araby-army' },
@@ -79,7 +80,6 @@ const rulesList = computed(() => [
 ]);
 
 const basicButtons = computed(() => [
-  { title: $t('labels.learn'), urlPath: '/get-started' },
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
   { title: $t('labels.tournaments'), urlPath: '/tournaments' },

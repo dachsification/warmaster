@@ -1,0 +1,82 @@
+{
+  "faction": "dwarfs",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Warriors",
+      "points": 110,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Handgunners",
+      "points": 90,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Rangers",
+      "points": 110,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Troll Slayers",
+      "points": 80,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Cannon",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Flame Cannon",
+      "points": 50,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Gyrocopter",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 155,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Runesmith",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Anvil",
+      "points": 50,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

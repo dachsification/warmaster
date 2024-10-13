@@ -1,0 +1,110 @@
+{
+  "faction": "nippon",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Ashigaru",
+      "points": 45,
+      "min": 1,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Ashigaru Bowmen",
+      "points": 55,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Ashigaru Teppo",
+      "points": 65,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Samurai",
+      "points": 80,
+      "min": 2,
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Mikata (Ronin & Monks)",
+      "points": 70,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Ninja",
+      "points": 60,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Oni",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Samurai Cavalry",
+      "points": 110,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Komainu",
+      "points": 40,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Tengu",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Shogun",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Daimyo",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Shugenja",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Tatsu",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Shrine",
+      "points": 50,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

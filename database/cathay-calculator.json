@@ -1,0 +1,124 @@
+{
+  "faction": "cathay",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Bannermen",
+      "points": 50,
+      "min": 3,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Crossbows",
+      "points": 40,
+      "min": 1,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Handguns",
+      "points": 50,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Terracotta Warriors",
+      "points": 30,
+      "min": "-",
+      "max": 6
+    },
+    {
+      "quantity": 1,
+      "name": "Maneaters",
+      "points": 140,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Chariots",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Imperial Cavalry",
+      "points": 90,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Hu Cavalry",
+      "points": 60,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Rocket Launcher",
+      "points": 55,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Triple Bows",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Sorcerer",
+      "points": 45,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Chariot",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Celestial Dragon",
+      "points": 100,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Tiger",
+      "points": 20,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Qilin",
+      "points": 15,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

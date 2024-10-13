@@ -1,0 +1,103 @@
+{
+  "faction": "lizardmen",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Skinks",
+      "points": 35,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Saurus",
+      "points": 75,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Temple Guard",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Salamander",
+      "points": 25,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Kroxigor",
+      "points": 135,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Cold One Riders",
+      "points": 140,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Terradons",
+      "points": 85,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Stegadon",
+      "points": 225,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Slann Mage Palanquin",
+      "points": 95,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Saurus Hero",
+      "points": 45,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Skink Hero",
+      "points": 70,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Skink Shaman",
+      "points": 30,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Stegadon",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Carnosaur",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

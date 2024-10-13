@@ -1,40 +1,26 @@
 {
-  "faction": "the empire",
+  "faction": "araby",
   "units": [
     {
       "quantity": 1,
-      "name": "Halberdiers",
+      "name": "Spearmen",
       "points": 45,
       "min": 2,
       "max": "-"
     },
     {
       "quantity": 1,
-      "name": "Crossbowmen",
+      "name": "Bowmen",
       "points": 55,
       "min": 2,
       "max": "-"
     },
     {
       "quantity": 1,
-      "name": "Handgunners",
+      "name": "Guards",
       "points": 65,
       "min": "-",
-      "max": 3
-    },
-    {
-      "quantity": 1,
-      "name": "Flagellants",
-      "points": 70,
-      "min": "-",
-      "max": 1
-    },
-    {
-      "quantity": 1,
-      "name": "Skirmishers",
-      "points": 25,
-      "min": "-",
-      "max": "-"
+      "max": 4
     },
     {
       "quantity": 1,
@@ -45,29 +31,29 @@
     },
     {
       "quantity": 1,
-      "name": "Pistoliers",
-      "points": 95,
+      "name": "Desert Riders",
+      "points": 75,
       "min": "-",
-      "max": 4
+      "max": "-"
     },
     {
       "quantity": 1,
-      "name": "Helblaster",
-      "points": 50,
+      "name": "Camel Riders",
+      "points": 100,
       "min": "-",
-      "max": 1
+      "max": 2
     },
     {
       "quantity": 1,
-      "name": "Cannon",
+      "name": "Magic Carpets",
       "points": 85,
       "min": "-",
       "max": 1
     },
     {
       "quantity": 1,
-      "name": "Steam Tank",
-      "points": 130,
+      "name": "Elephants",
+      "points": 200,
       "min": "-",
       "max": 1
     },
@@ -94,15 +80,22 @@
     },
     {
       "quantity": 1,
-      "name": "Griffon",
-      "points": 80,
+      "name": "Flying Carpet",
+      "points": 10,
       "min": "-",
       "max": 1
     },
     {
       "quantity": 1,
-      "name": "War Altar",
-      "points": 15,
+      "name": "Elephant",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Djinn",
+      "points": 90,
       "min": "-",
       "max": 1
     }

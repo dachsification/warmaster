@@ -1,0 +1,96 @@
+{
+  "faction": "skaven",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Clanrats",
+      "points": 40,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Stormvermin",
+      "points": 55,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Jezzails",
+      "points": 70,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Plague Monks",
+      "points": 70,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Rat Swarms",
+      "points": 25,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Gutter Runners",
+      "points": 60,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Rat Ogres",
+      "points": 110,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Warp Lightning Cannon",
+      "points": 60,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Doom Wheel",
+      "points": 125,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Grey Seer",
+      "points": 130,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 70,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Warlock",
+      "points": 30,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Screaming Bell",
+      "points": 125,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

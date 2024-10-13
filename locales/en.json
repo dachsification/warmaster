@@ -13,6 +13,7 @@
     "accept": "Accept"
   },
   "armies": {
+    "all": "All",
     "tombKing": "Tomb Kings",
     "albion": "Albion",
     "araby": "Araby",
