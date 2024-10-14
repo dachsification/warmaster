@@ -20,7 +20,7 @@ declare global {
     meleeAttack: number;
     rangeAttack: number;
     hits: string | number;
-    armour: string | number;
+    armour: string;
     command: string | number;
     size: number;
     points: number;

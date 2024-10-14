@@ -57,7 +57,7 @@
     {
       "name": "Crown of Command",
       "points": 70,
-      "rule": "First General‘s command roll each turn may be against unmodified Command 10 value. If failed, the Crown is lost.",
+      "rule": "First General's command roll each turn may be against unmodified Command 10 value. If failed, the Crown is lost.",
       "condition": "General only"
     },
     {

@@ -1,9 +1,9 @@
 {
-  "name": "The Empire",
+  "name": "Chaos",
   "armyRuleTitle": "",
   "units": [
     {
-      "name": "Halberdiers",
+      "name": "Chaos Warriors",
       "type": "Infantry",
       "meleeAttack": 3,
       "rangeAttack": 0,
@@ -17,7 +17,7 @@
       "special": ""
     },
     {
-      "name": "Crossbowmen",
+      "name": "Chaos Marauders",
       "type": "Infantry",
       "meleeAttack": 3,
       "rangeAttack": 1,
@@ -31,7 +31,7 @@
       "special": ""
     },
     {
-      "name": "Handgunners",
+      "name": "Ogres",
       "type": "Infantry",
       "meleeAttack": 3,
       "rangeAttack": 1,
@@ -45,7 +45,7 @@
       "special": "Count enemy Armour values as one worse than normal when shot by a handgun. So an Armour value of 3 + counts as 4+, 4+ as 5+, and 5+ as 6+, whilst an Armour value of 6+ can't save against a handgun. One unit of Crossbowmen per full 1000 points can be replaced by Handgunners (including the 10pts extra in price) while still counting for the Crossbowmen min/max value. Note that this unit also counts for min/max value of Handgunners."
     },
     {
-      "name": "Flagellants",
+      "name": "Trolls",
       "type": "Infantry",
       "meleeAttack": 5,
       "rangeAttack": 0,
@@ -59,7 +59,7 @@
       "special": "So keen are they to meet their maker that a unit of Flagellants will always use its initiative to charge an enemy if possible and can't be given orders instead. They'll never use their initiative to evade. They can't be driven back by shooting and do not roll for drive backs. If victorious in combat they must pursue or advance where possible. Flagellants are unaffected by enemies that cause terror in combat, so they do not suffer the usual -1 Attack modifier."
     },
     {
-      "name": "Skirmishers",
+      "name": "Marauder Horsemen",
       "type": "Infantry",
       "meleeAttack": 4,
       "rangeAttack": 0,
@@ -73,7 +73,7 @@
       "special": "Skirmisher stands never fight as independent units. Instead, you may add one stand of Skirmishers to any of your infantry units apart from Flagellants. This brings the size of the unit to 4 stands -i.e. 3 ordinary stands plus the Skirmishers. Skirmishers always have the same Armour value as the rest of their unit, either 6+ or 0. They fight as part of their unit and can be removed as a unit casualty if the player wishes. Skirmisher casualties never count as casualties for purposes of issuing orders, which means there is no -1 Command penalty as there normally would be for units that have lost a stand. Skirmisher stands never count as part of the unit's formation when determining whether they move at full or half pace, so no movement penalty is incurred if they are arranged out of the unit's regular formation. As a result Skirmishers are both more adaptable and more expendable than other troops."
     },
     {
-      "name": "Knights",
+      "name": "Chaos Knights",
       "type": "Cavalry",
       "meleeAttack": 3,
       "rangeAttack": 0,
@@ -87,7 +87,7 @@
       "special": ""
     },
     {
-      "name": "Pistoliers",
+      "name": "Chaos Hounds",
       "type": "Cavalry",
       "meleeAttack": 3,
       "rangeAttack": 1,
@@ -101,7 +101,7 @@
       "special": "Pistoliers have a shooting range of only 15cm however they can shoot all round - i.e. behind or to the side as well as to their front. Just measure the range from any stand's edge either front, side or rear. Pistoliers can shoot at enemy charging them from any direction."
     },
     {
-      "name": "Helblaster",
+      "name": "Chaos Chariots",
       "type": "Artillery",
       "meleeAttack": 1,
       "rangeAttack": 8,
@@ -115,7 +115,7 @@
       "special": "See page 7 of Warmaster Armies."
     },
     {
-      "name": "Cannon",
+      "name": "Harpies",
       "type": "Artillery",
       "meleeAttack": 1,
       "rangeAttack": 2,
@@ -129,7 +129,21 @@
       "special": ""
     },
     {
-      "name": "Steam Tank",
+      "name": "Dragon Ogres",
+      "type": "Machine",
+      "meleeAttack": 3,
+      "rangeAttack": 3,
+      "hits": 4,
+      "armour": "3+",
+      "command": "-",
+      "size": 1,
+      "points": 130,
+      "min": "-",
+      "max": 1,
+      "special": "See page 7 of Warmaster Armies."
+    },
+    {
+      "name": "Chaos Spawn",
       "type": "Machine",
       "meleeAttack": 3,
       "rangeAttack": 3,
@@ -171,7 +185,7 @@
       "special": ""
     },
     {
-      "name": "Wizard",
+      "name": "Sorcerer",
       "type": "Wizard",
       "meleeAttack": 0,
       "rangeAttack": 0,
@@ -185,21 +199,21 @@
       "special": ""
     },
     {
-      "name": "Griffon",
+      "name": "Chaos Dragon",
       "type": "Monstrous Mount",
-      "meleeAttack": 2,
-      "rangeAttack": 0,
+      "meleeAttack": 3,
+      "rangeAttack": 3,
       "hits": "-",
       "armour": "-",
       "command": "-",
       "size": 1,
-      "points": 80,
+      "points": 100,
       "min": "-",
       "max": 1,
       "special": "Generals, Wizards and Heroes can ride Griffons. The Griffon can fly increasing its rider's Movement from 60cm to 100cm. It adds +2 Attacks to those of its rider. A unit that includes a Griffon rider causes terror in its enemies (and one might imagine a great deal of nervousness amongst its own ranks)."
     },
     {
-      "name": "War Altar",
+      "name": "Chariot",
       "type": "Chariot Mount",
       "meleeAttack": 1,
       "rangeAttack": 0,
@@ -207,10 +221,10 @@
       "armour": "-",
       "command": "-",
       "size": 1,
-      "points": 15,
+      "points": 10,
       "min": "-",
       "max": 1,
-      "special": "There is only one War Altar of Sigmar. Consequently an army, no matter how large, can only ever include one. A War Altar can only be included as a mount for a Wizard, in which case he is assumed to be the Grand Theogonist. The presence of the War Altar adds +1 Attack and enables the Grand Theogonist to add +1 to the dice result when casting a spell once during the battle. The player must announce that he is using the power of the War Altar before rolling the dice for the spell."
+      "special": "Generals, Sorcerers and Heroes can ride Chariots. An extra +1 Attack is added to those of its rider."
     }
   ],
   "armyRules": {},
