@@ -36,4 +36,25 @@ declare global {
     armyRules: {};
     spells: [{}];
   };
+
+  type magicItem = {
+    name: string;
+    points: number;
+    rule: string;
+    condition: string;
+  };
+
+  type magicWeapon = {
+    name: string;
+    points: number;
+    rule: string;
+  };
+
+  type magicBanner = {
+    name: string;
+    pointsA: number;
+    pointsB?: number | null;
+    pointsC?: number | null;
+    rule: string;
+  };
 }
