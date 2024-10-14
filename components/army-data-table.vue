@@ -1,16 +1,15 @@
 <template>
   <v-data-table
     v-model:expanded="expanded"
-    :headers="headers"
+    :headers="factionHeaders"
     :items="units"
     :search="search"
     item-value="name"
     density="compact"
-    items-per-page="25"
+    items-per-page="50"
     show-expand
     align="center"
   >
-    <template #bottom />
     <template #top>
       <v-text-field
         v-model="search"
@@ -39,10 +38,69 @@
   </v-data-table>
 </template>
 <script setup lang="ts">
-import UnitHeaders from '../database/unit-headers.json';
 defineProps<{ units: Unit[] }>();
-const headers = ref();
-headers.value = UnitHeaders.headers;
+const factionHeaders = ref([
+  {
+    title: 'Name',
+    align: 'start',
+    key: 'name',
+  },
+  {
+    title: 'Type',
+    align: 'start',
+    key: 'type',
+  },
+  {
+    title: 'Melee',
+    align: 'start',
+    key: 'meleeAttack',
+  },
+  {
+    title: 'Range',
+    align: 'start',
+    key: 'rangeAttack',
+  },
+  {
+    title: 'Hits',
+    align: 'start',
+    key: 'hits',
+  },
+  {
+    title: 'Armour',
+    align: 'start',
+    key: 'armour',
+  },
+  {
+    title: 'Command',
+    align: 'start',
+    key: 'command',
+  },
+  {
+    title: 'Unitsize',
+    align: 'start',
+    key: 'size',
+  },
+  {
+    title: 'Point per Unit',
+    align: 'start',
+    key: 'points',
+  },
+  {
+    title: 'Min',
+    align: 'start',
+    key: 'min',
+  },
+  {
+    title: 'Max',
+    align: 'start',
+    key: 'max',
+  },
+  {
+    title: 'Special',
+    align: 'start',
+    key: 'data-table-expand',
+  },
+] as const);
 const expanded = ref([]);
 const search = ref('');
 </script>

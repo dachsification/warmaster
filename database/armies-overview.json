@@ -1,13 +1,6 @@
 {
   "armies": [
     {
-      "title": "Overview",
-      "Rating": 1,
-      "Complexity": 1,
-      "Fun": 1,
-      "urlPath": "/armies"
-    },
-    {
       "title": "The Empire",
       "Rating": 1,
       "Complexity": 1,

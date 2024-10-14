@@ -23,11 +23,11 @@
         />
       </v-col>
     </v-row>
-
     <v-row
       justify="center"
       class="d-flex align-center"
     >
+      <v-col></v-col>
       <v-col cols="auto">
         <v-text-field
           variant="plain"
@@ -37,34 +37,36 @@
           style="min-width: 100px"
         />
       </v-col>
+      <v-col
+        ><p>{{ minWarning }}</p></v-col
+      >
     </v-row>
-
     <v-row justify="center">
       <v-col cols="7">
         <v-data-table
-          :headers="headers"
+          :headers="factionHeaders"
           :items="faction.units"
           density="compact"
           item-value="name"
-          items-per-page="25"
+          items-per-page="-1"
+          hide-default-footer
           @click:row="addItem"
         >
-          <template #bottom />
         </v-data-table>
       </v-col>
       <v-col cols="5">
-        <v-list style="padding: 0px">
-          <v-list-subheader class="font-weight-bold">Army List</v-list-subheader>
-          <v-divider></v-divider>
-          <v-list-item
-            v-for="(item, index) in armyList"
-            :key="index"
-            v-model="armyList"
-            @click="removeItem(index, item)"
-          >
-            {{ item.quantity }} - {{ item.name }} - {{ item.points }}</v-list-item
-          >
-        </v-list>
+        <v-data-table
+          :headers="armylistHeaders"
+          :items="armyList"
+          density="compact"
+          item-value="name"
+          hide-default-footer
+          items-per-page="-1"
+          :no-data-text="emptyArmylist"
+          :row-props="minWarningRow"
+          @click:row="removeItem"
+        >
+        </v-data-table>
       </v-col>
     </v-row>
     <v-row justify="center">
@@ -76,36 +78,36 @@
 </template>
 <script setup lang="ts">
 import Armies from '../../database/armies-overview.json';
-import TombKings from '../../database/tomb-kings-calculator.json';
-import Empire from '../../database/the-empire-calculator.json';
-import Araby from '../../database/araby-calculator.json';
-import WoodElves from '../../database/wood-elves-calculator.json';
-import DarkElves from '../../database/dark-elves-calculator.json';
-import HighElves from '../../database/high-elves-calculator.json';
-import Chaos from '../../database/chaos-calculator.json';
-import Orcs from '../../database/orcs-calculator.json';
-import Dwarfs from '../../database/dwarfs-calculator.json';
-import Skaven from '../../database/skaven-calculator.json';
-import Lizardmen from '../../database/lizardmen-calculator.json';
-import Bretonnia from '../../database/bretonnia-calculator.json';
-import Kislev from '../../database/kislev-calculator.json';
-import Daemons from '../../database/daemons-calculator.json';
-import Vampire from '../../database/vampire-counts-calculator.json';
-import DogsOfWar from '../../database/dogs-of-war-calculator.json';
-import Ogre from '../../database/ogre-kingdom-calculator.json';
-import Albion from '../../database/albion-calculator.json';
-import Goblin from '../../database/goblin-calculator.json';
-import WitchHunter from '../../database/witch-hunter-calculator.json';
-import Beastmen from '../../database/beastmen-calculator.json';
-import Norse from '../../database/norse-calculator.json';
-import Cathay from '../../database/cathay-calculator.json';
-import Nippon from '../../database/nippon-calculator.json';
-import Ror from '../../database/ror-calculator.json';
-import ChaosDwarfs from '../../database/chaos-dwarfs-calculator.json';
-import Fallback from '../../database/fallback-army-calculator.json';
+import TombKings from '../../database/army-builder/tomb-kings-calculator.json';
+import Empire from '../../database/army-builder/the-empire-calculator.json';
+import Araby from '../../database/army-builder/araby-calculator.json';
+import WoodElves from '../../database/army-builder/wood-elves-calculator.json';
+import DarkElves from '../../database/army-builder/dark-elves-calculator.json';
+import HighElves from '../../database/army-builder/high-elves-calculator.json';
+import Chaos from '../../database/army-builder/chaos-calculator.json';
+import Orcs from '../../database/army-builder/orcs-calculator.json';
+import Dwarfs from '../../database/army-builder/dwarfs-calculator.json';
+import Skaven from '../../database/army-builder/skaven-calculator.json';
+import Lizardmen from '../../database/army-builder/lizardmen-calculator.json';
+import Bretonnia from '../../database/army-builder/bretonnia-calculator.json';
+import Kislev from '../../database/army-builder/kislev-calculator.json';
+import Daemons from '../../database/army-builder/daemons-calculator.json';
+import Vampire from '../../database/army-builder/vampire-counts-calculator.json';
+import DogsOfWar from '../../database/army-builder/dogs-of-war-calculator.json';
+import Ogre from '../../database/army-builder/ogre-kingdom-calculator.json';
+import Albion from '../../database/army-builder/albion-calculator.json';
+import Goblin from '../../database/army-builder/goblin-calculator.json';
+import WitchHunter from '../../database/army-builder/witch-hunter-calculator.json';
+import Beastmen from '../../database/army-builder/beastmen-calculator.json';
+import Norse from '../../database/army-builder/norse-calculator.json';
+import Cathay from '../../database/army-builder/cathay-calculator.json';
+import Nippon from '../../database/army-builder/nippon-calculator.json';
+import Ror from '../../database/army-builder/ror-calculator.json';
+import ChaosDwarfs from '../../database/army-builder/chaos-dwarfs-calculator.json';
+import Fallback from '../../database/army-builder/fallback-army-calculator.json';
 
 // Table Headers
-const headers = ref([
+const factionHeaders = ref([
   {
     title: 'Name',
     align: 'start',
@@ -128,6 +130,34 @@ const headers = ref([
   },
 ] as const);
 
+const armylistHeaders = ref([
+  {
+    title: 'Quantity',
+    align: 'center',
+    key: 'quantity',
+  },
+  {
+    title: 'Name',
+    align: 'start',
+    key: 'name',
+  },
+  // {
+  //   title: 'Min',
+  //   align: 'start',
+  //   key: 'min',
+  // },
+  // {
+  //   title: 'Max',
+  //   align: 'start',
+  //   key: 'max',
+  // },
+  {
+    title: 'Points',
+    align: 'center',
+    key: 'points',
+  },
+] as const);
+
 // Selects & Button
 const itemsForFactionSelect = Armies.armies;
 const itemsForPointSelect = ['1000', '1250', '1500', '2000'];
@@ -135,7 +165,7 @@ const selectedFaction = ref('');
 const selectedArmySize = ref();
 const disableSelectArmySize = ref(true);
 const disableSelectedFaction = ref(false);
-
+const emptyArmylist = 'No Units Selected - Armylist is empty';
 // Points
 const currentPoints = ref(0);
 // Armeeliste
@@ -276,13 +306,13 @@ function addItem(_event: PointerEvent, row: any) {
     if (armyList.value.length) {
       const existingEntry = armyList.value.find((a) => a.name === selectedUnit.name);
       if (existingEntry) {
-        armyList.value.forEach((entry) => {
-          if (entry.name === existingEntry.name) {
-            if (typeof entry.max === 'number' && isMax(entry.max, entry.quantity, entry.min)) {
-              addExistingArmylistEntry(entry, selectedUnit.points);
+        armyList.value.forEach((unit) => {
+          if (unit.name === existingEntry.name) {
+            if (typeof unit.max === 'number' && isMax(unit.max, unit.quantity, unit.min)) {
+              addExistingArmylistEntry(unit, selectedUnit.points);
             }
-            if (typeof entry.max === 'string') {
-              addExistingArmylistEntry(entry, selectedUnit.points);
+            if (typeof unit.max === 'string') {
+              addExistingArmylistEntry(unit, selectedUnit.points);
             }
           }
         });
@@ -293,21 +323,32 @@ function addItem(_event: PointerEvent, row: any) {
   }
 }
 
-function removeItem(index: number, item: UnitForCalculator) {
-  const points = item.points / item.quantity;
-  if (typeof armyList.value[index].min === 'number') {
-    if (armyList.value[index].quantity > armyList.value[index].min) {
-      armyList.value[index].quantity--;
-      armyList.value[index].points -= points;
-      reducePoints(points);
+function calculateRemoving(test: any, points: number) {
+  test.quantity--;
+  test.points -= points;
+  reducePoints(points);
+}
+
+function removeItem(_event: PointerEvent, row: any) {
+  const selectedUnit: UnitForCalculator = { ...row.item };
+  const pointsPerUnit = selectedUnit.points / selectedUnit.quantity;
+  if (typeof selectedUnit.min === 'number') {
+    if (selectedUnit.quantity > selectedUnit.min) {
+      armyList.value.forEach((unit) => {
+        if (unit.name === selectedUnit.name) {
+          calculateRemoving(unit, pointsPerUnit);
+        }
+      });
     }
-  } else if (armyList.value[index].quantity > 1) {
-    armyList.value[index].quantity--;
-    armyList.value[index].points -= points;
-    reducePoints(points);
+  } else if (selectedUnit.quantity > 1) {
+    armyList.value.forEach((unit) => {
+      if (unit.name === selectedUnit.name) {
+        calculateRemoving(unit, pointsPerUnit);
+      }
+    });
   } else {
-    armyList.value.splice(index, 1);
-    reducePoints(points);
+    armyList.value.splice(row.index, 1);
+    reducePoints(pointsPerUnit);
   }
 }
 
@@ -335,15 +376,22 @@ function addMinUnits(modelValue: any) {
   });
   armyList.value = minUnitList;
   findStupidRule(armysizeMultiplier, armyList.value);
+  console.log(minWarningRow(armyList.value));
+  console.log('armyList.value', armyList.value);
+  minWarningRow(armyList.value);
 }
+
+const stupidUnit = ref('');
+const test = ref(false);
+const minWarning = computed(() => (test.value ? `${stupidUnit.value} missing` : ''));
+
 function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
   const stupidArmiesWithStupidRule = ['the empire', 'dwarfs', 'chaos dwarfs', 'dogs of war', 'cathay', 'goblins'];
-  const a = stupidArmiesWithStupidRule.includes(faction.value.faction);
-  const alarm = ref();
-  if (a) {
-    const stupidUnit = ref('');
+  const onlyForStupidArmies = stupidArmiesWithStupidRule.includes(faction.value.faction);
+  if (onlyForStupidArmies) {
     if (selectedFaction.value === 'The Empire' || selectedFaction.value === 'Dogs of War') {
       stupidUnit.value = 'Crossbowmen';
+      test.value = true;
     }
     if (selectedFaction.value === 'Dwarfs') {
       stupidUnit.value = 'Warriors';
@@ -358,25 +406,30 @@ function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
     if (selectedFaction.value === 'Cathay') {
       stupidUnit.value = 'Crossbows';
     }
-    console.log(armySize);
     minUnitList?.forEach((e) => {
       if (e.name === stupidUnit.value) {
+        const pointsPerUnit = (e.points / e.quantity) * armySize;
+        e.points -= pointsPerUnit;
         e.quantity -= armySize;
-        // Unitpoints
-        // Armypoints
+        reducePoints(pointsPerUnit);
       }
     });
-    console.log(alarm);
-    // Warning for Min
-  } else console.log('nääääääää');
+  }
 }
-// Sonderregeln für:
-// Imperium - Handgunners für Crossbomen 2
-// Zwerge - Handgunners für warriors 2
-// DoW - Handgunners für Crossbomen 2
-// Goblins - Squig Herd für goblins 4 -2
-// Chaoszwerge - Blunderbusses für cd 2
-// Cathay - Handguns für crossbows 1 alle
+function minWarningRow(units: any[]) {
+  console.log('UNIT', units);
+  units.forEach((e: any) => {
+    if (typeof e.min === 'number') {
+      console.log('test');
+      console.log(e.min);
+      console.log(e.quantity);
+      if (e.min > e.quantity) {
+        console.log('test2');
+        return { style: 'color: red!important' };
+      }
+    }
+  });
+}
 </script>
 <style scoped>
 .centered-input :deep(input) {

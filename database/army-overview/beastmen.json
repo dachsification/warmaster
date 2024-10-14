@@ -1,12 +1,12 @@
 {
   "name": "Beastmen",
-  "version": "Revolution",
   "armyRuleTitle": "The things in the woods",
   "units": [
     {
       "name": "Beastherd",
       "type": "Infantry",
-      "attack": "3",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "6+",
       "command": "-",
@@ -19,7 +19,8 @@
     {
       "name": "Herdkin",
       "type": "Infantry",
-      "attack": "3/1",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "0",
       "command": "-",
@@ -32,7 +33,8 @@
     {
       "name": "Bestigors",
       "type": "Infantry",
-      "attack": 4,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "5+",
       "command": "-",
@@ -45,7 +47,8 @@
     {
       "name": "Minotaurs",
       "type": "Infantry",
-      "attack": 5,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 4,
       "armour": "-",
       "command": "-",
@@ -58,7 +61,8 @@
     {
       "name": "Centigors",
       "type": "Cavalry",
-      "attack": "3/1",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "6+",
       "command": "-",
@@ -71,7 +75,8 @@
     {
       "name": "Chaos Hounds",
       "type": "Cavalry",
-      "attack": 3,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "0",
       "command": "-",
@@ -84,7 +89,8 @@
     {
       "name": "Tuskgor Chariots",
       "type": "Chariot",
-      "attack": 3,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 3,
       "armour": "5+",
       "command": "-",
@@ -97,7 +103,8 @@
     {
       "name": "Dragon Ogres",
       "type": "Monster",
-      "attack": 6,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 4,
       "armour": "5+",
       "command": "-",
@@ -110,7 +117,8 @@
     {
       "name": "Chaos Spawn",
       "type": "Monster",
-      "attack": "3/3",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 4,
       "armour": "3+",
       "command": "-",
@@ -123,7 +131,8 @@
     {
       "name": "Dragon Ogre Shaggoth",
       "type": "Monster",
-      "attack": 8,
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": 8,
       "armour": "5+",
       "command": "-",
@@ -136,7 +145,8 @@
     {
       "name": "Beastlord",
       "type": "General",
-      "attack": "+2",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": "-",
       "armour": "-",
       "command": 9,
@@ -149,7 +159,8 @@
     {
       "name": "Doombull",
       "type": "Hero",
-      "attack": "+2",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": "-",
       "armour": "-",
       "command": 6,
@@ -162,7 +173,8 @@
     {
       "name": "Wargor",
       "type": "Hero",
-      "attack": "+1",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": "-",
       "armour": "-",
       "command": 8,
@@ -175,7 +187,8 @@
     {
       "name": "Bray Shaman",
       "type": "Wizard",
-      "attack": "+0",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": "-",
       "armour": "-",
       "command": 8,
@@ -188,7 +201,8 @@
     {
       "name": "Tuskgor Chariot",
       "type": "Chariot Mount",
-      "attack": "+1",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
       "hits": "-",
       "armour": "-",
       "command": "-",
@@ -206,7 +220,7 @@
       "roll": 4,
       "range": "30cm",
       "text": [
-        "*The pulsating energies of Chaos radiate from the Shaman and envelop a cloud of arrows launched from the Beastmen’s archers. Falling around the enemy they are surrounded by ill-omened hallucinations and terrifying phantoms, arousing terror amongst the enemy.*",
+        "*The pulsating energies of Chaos radiate from the Shaman and envelop a cloud of arrows launched from the Beastmen's archers. Falling around the enemy they are surrounded by ill-omened hallucinations and terrifying phantoms, arousing terror amongst the enemy.*",
         "",
         "This spell can be cast on a single unengaged unit of Herdkin, Centigor, or Chaos Spawn. The Shaman must be able to see his target to use this spell. When the spell is successfully cast the target unit gains Screaming Arrows for this shooting phase. When a unit is driven back as a result of hits scored by a unit with Screaming Arrows, then any dice rolled in respect of drivebacks for those hits will cause Confusion on the roll of 4, 5 or 6 (rather than 6 as normal). Note that if a unit has taken other hits as well it will be necessary to roll the Screaming Arrow dice separately."
       ]
@@ -216,7 +230,7 @@
       "roll": 5,
       "range": "30cm",
       "text": [
-        "*The Shaman’s magic power arouses in the herd an uncontrollable desire to tear asunder any enemy and feast on their bloody remains. Rows of wild warriors charge headlong into their foes.*",
+        "*The Shaman's magic power arouses in the herd an uncontrollable desire to tear asunder any enemy and feast on their bloody remains. Rows of wild warriors charge headlong into their foes.*",
         "",
         "The spell can be cast on unengaged friendly unit of infantry or cavalry within range regardless of whether the Shaman can see it or not. The spell affects only a single unit, never a brigade. The unit can be moved just as if it had received an order in the Command phase. Character stands that have joined the unit will not move with it - they remain where they are."
       ]
@@ -236,7 +250,7 @@
       "roll": 6,
       "range": "30cm",
       "text": [
-        "*The Beastman Herd rise on the Shaman’s command. Emboldened by his fervour they charge at the enemy with unbridled fury.*",
+        "*The Beastman Herd rise on the Shaman's command. Emboldened by his fervour they charge at the enemy with unbridled fury.*",
         "",
         "This spell can be cast on all Beastherd, Herdkin and Centigors units engaged in close combat and within range regardless of whether the Shaman can see them or not. When the spell is successfully cast, each affected unit receives additional +1 Attack per stand (including character stands) for the duration of its first following combat engagement. Additional Attack bonus does not apply when these units advance into next enemies."
       ]
