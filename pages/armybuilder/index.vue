@@ -42,7 +42,7 @@
       >
     </v-row>
     <v-row justify="center">
-      <v-col cols="7">
+      <v-col cols="5">
         <v-data-table
           :headers="factionHeaders"
           :items="faction.units"
@@ -54,17 +54,27 @@
         >
         </v-data-table>
       </v-col>
-      <v-col cols="5">
+      <v-col cols="4">
         <v-data-table
-          :headers="armylistHeaders"
+          :headers="armyListHeaders"
           :items="armyList"
           density="compact"
           item-value="name"
           hide-default-footer
           items-per-page="-1"
           :no-data-text="emptyArmylist"
-          :row-props="minWarningRow"
           @click:row="removeItem"
+        >
+        </v-data-table>
+      </v-col>
+      <v-col cols="3">
+        <v-data-table
+          :headers="itemHeaders"
+          :items="itemList"
+          density="compact"
+          item-value="name"
+          hide-default-footer
+          items-per-page="-1"
         >
         </v-data-table>
       </v-col>
@@ -78,6 +88,7 @@
 </template>
 <script setup lang="ts">
 import Armies from '../../database/armies-overview.json';
+import Items from '../../database/magic-items.json';
 import TombKings from '../../database/army-builder/tomb-kings-calculator.json';
 import Empire from '../../database/army-builder/the-empire-calculator.json';
 import Araby from '../../database/army-builder/araby-calculator.json';
@@ -130,7 +141,7 @@ const factionHeaders = ref([
   },
 ] as const);
 
-const armylistHeaders = ref([
+const armyListHeaders = ref([
   {
     title: 'Quantity',
     align: 'center',
@@ -158,6 +169,33 @@ const armylistHeaders = ref([
   },
 ] as const);
 
+const itemHeaders = ref([
+  {
+    title: 'Name',
+    align: 'start',
+    key: 'name',
+  },
+  {
+    title: 'Points',
+    align: 'start',
+    key: 'points',
+  },
+  {
+    title: 'PointsB',
+    align: 'start',
+    key: 'pointsB',
+  },
+  {
+    title: 'PointsC',
+    align: 'start',
+    key: 'pointsC',
+  },
+  {
+    title: 'Type',
+    align: 'start',
+    key: 'type',
+  },
+] as const);
 // Selects & Button
 const itemsForFactionSelect = Armies.armies;
 const itemsForPointSelect = ['1000', '1250', '1500', '2000'];
@@ -165,12 +203,13 @@ const selectedFaction = ref('');
 const selectedArmySize = ref();
 const disableSelectArmySize = ref(true);
 const disableSelectedFaction = ref(false);
-const emptyArmylist = 'No Units Selected - Armylist is empty';
+const emptyArmylist = 'No Units Selected - armyList is empty';
 // Points
 const currentPoints = ref(0);
 // Armeeliste
 const armyList = ref<UnitForCalculator[]>([]);
-
+// Magic Items
+const itemList = Items.items;
 // Armies
 const tombKingArmy = TombKings;
 const empireArmy = Empire;
@@ -260,7 +299,7 @@ const faction = computed(() => {
   }
 });
 
-// Reset Points, Armylist and MinButton
+// Reset Points, armyList and MinButton
 watch(
   () => selectedFaction.value,
   () => {
@@ -283,14 +322,14 @@ function reducePoints(points: number) {
   currentPoints.value -= points;
 }
 
-function addNewArmylistEntry(armylist: UnitForCalculator[], unit: UnitForCalculator) {
-  armylist.push(unit);
+function addNewArmyListEntry(armyList: UnitForCalculator[], unit: UnitForCalculator) {
+  armyList.push(unit);
   addPoints(unit.points);
 }
 
-function addExistingArmylistEntry(armylistEntry: UnitForCalculator, points: number) {
-  armylistEntry.quantity++;
-  armylistEntry.points += points;
+function addExistingArmyListEntry(armyListEntry: UnitForCalculator, points: number) {
+  armyListEntry.quantity++;
+  armyListEntry.points += points;
   addPoints(points);
 }
 
@@ -309,16 +348,16 @@ function addItem(_event: PointerEvent, row: any) {
         armyList.value.forEach((unit) => {
           if (unit.name === existingEntry.name) {
             if (typeof unit.max === 'number' && isMax(unit.max, unit.quantity, unit.min)) {
-              addExistingArmylistEntry(unit, selectedUnit.points);
+              addExistingArmyListEntry(unit, selectedUnit.points);
             }
             if (typeof unit.max === 'string') {
-              addExistingArmylistEntry(unit, selectedUnit.points);
+              addExistingArmyListEntry(unit, selectedUnit.points);
             }
           }
         });
-      } else addNewArmylistEntry(armyList.value, selectedUnit);
+      } else addNewArmyListEntry(armyList.value, selectedUnit);
     } else {
-      addNewArmylistEntry(armyList.value, selectedUnit);
+      addNewArmyListEntry(armyList.value, selectedUnit);
     }
   }
 }
@@ -376,9 +415,6 @@ function addMinUnits(modelValue: any) {
   });
   armyList.value = minUnitList;
   findStupidRule(armysizeMultiplier, armyList.value);
-  console.log(minWarningRow(armyList.value));
-  console.log('armyList.value', armyList.value);
-  minWarningRow(armyList.value);
 }
 
 const stupidUnit = ref('');
@@ -416,20 +452,8 @@ function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
     });
   }
 }
-function minWarningRow(units: any[]) {
-  console.log('UNIT', units);
-  units.forEach((e: any) => {
-    if (typeof e.min === 'number') {
-      console.log('test');
-      console.log(e.min);
-      console.log(e.quantity);
-      if (e.min > e.quantity) {
-        console.log('test2');
-        return { style: 'color: red!important' };
-      }
-    }
-  });
-}
+
+// return { style: 'color: red!important' };
 </script>
 <style scoped>
 .centered-input :deep(input) {
