@@ -1,0 +1,283 @@
+{
+  "name": "Chaos",
+  "armyRuleTitle": "",
+  "units": [
+    {
+      "name": "Chaos Warriors",
+      "type": "Infantry",
+      "meleeAttack": 4,
+      "rangeAttack": 0,
+      "hits": 4,
+      "armour": "4+",
+      "command": "-",
+      "size": 3,
+      "points": 140,
+      "min": 1,
+      "max": "-",
+      "special": ""
+    },
+    {
+      "name": "Chaos Marauders",
+      "type": "Infantry",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "5+",
+      "command": "-",
+      "size": 3,
+      "points": 60,
+      "min": 1,
+      "max": "-",
+      "special": ""
+    },
+    {
+      "name": "Ogres",
+      "type": "Infantry",
+      "meleeAttack": 4,
+      "rangeAttack": 0,
+      "hits": 4,
+      "armour": "5+",
+      "command": "-",
+      "size": 3,
+      "points": 105,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Trolls",
+      "type": "Infantry",
+      "meleeAttack": 5,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "5+",
+      "command": "-",
+      "size": 3,
+      "points": 110,
+      "min": "-",
+      "max": 3,
+      "special": ""
+    },
+    {
+      "name": "Marauder Horsemen",
+      "type": "Infantry",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "5+",
+      "command": "-",
+      "size": 1,
+      "points": 90,
+      "min": "-",
+      "max": 4,
+      "special": ""
+    },
+    {
+      "name": "Chaos Knights",
+      "type": "Cavalry",
+      "meleeAttack": 4,
+      "rangeAttack": 0,
+      "hits": 4,
+      "armour": "4+",
+      "command": "-",
+      "size": 3,
+      "points": 180,
+      "min": "-",
+      "max": 2,
+      "special": ""
+    },
+    {
+      "name": "Chaos Hounds",
+      "type": "Cavalry",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "0",
+      "command": "-",
+      "size": 3,
+      "points": 40,
+      "min": "-",
+      "max": 2,
+      "special": ""
+    },
+    {
+      "name": "Chaos Chariots",
+      "type": "Chariot",
+      "meleeAttack": 3,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "5+",
+      "command": "-",
+      "size": 3,
+      "points": 95,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Harpies",
+      "type": "Monster",
+      "meleeAttack": 2,
+      "rangeAttack": 0,
+      "hits": 3,
+      "armour": "6+",
+      "command": "-",
+      "size": 3,
+      "points": 65,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Dragon Ogres",
+      "type": "Monster",
+      "meleeAttack": 6,
+      "rangeAttack": 0,
+      "hits": 4,
+      "armour": "5+",
+      "command": "-",
+      "size": 3,
+      "points": 230,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Chaos Spawn",
+      "type": "Monster",
+      "meleeAttack": 3,
+      "rangeAttack": 3,
+      "hits": 4,
+      "armour": "3+",
+      "command": "-",
+      "size": 1,
+      "points": 110,
+      "min": "-",
+      "max": 2,
+      "special": ""
+    },
+    {
+      "name": "General",
+      "type": "General",
+      "meleeAttack": 2,
+      "rangeAttack": 0,
+      "hits": "-",
+      "armour": "-",
+      "command": 9,
+      "size": 1,
+      "points": 125,
+      "min": 1,
+      "max": 1,
+      "special": "-"
+    },
+    {
+      "name": "Hero",
+      "type": "Hero",
+      "meleeAttack": 1,
+      "rangeAttack": 0,
+      "hits": "-",
+      "armour": "-",
+      "command": 8,
+      "size": 1,
+      "points": 80,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Sorcerer",
+      "type": "Wizard",
+      "meleeAttack": 1,
+      "rangeAttack": 0,
+      "hits": "-",
+      "armour": "-",
+      "command": 8,
+      "size": 1,
+      "points": 90,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Chaos Dragon",
+      "type": "Monstrous Mount",
+      "meleeAttack": 3,
+      "rangeAttack": 3,
+      "hits": "-",
+      "armour": "-",
+      "command": "-",
+      "size": 1,
+      "points": 100,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    },
+    {
+      "name": "Chariot",
+      "type": "Chariot Mount",
+      "meleeAttack": 1,
+      "rangeAttack": 0,
+      "hits": "-",
+      "armour": "-",
+      "command": "-",
+      "size": 1,
+      "points": 10,
+      "min": "-",
+      "max": 1,
+      "special": ""
+    }
+  ],
+  "armyRules": {},
+  "spells": [
+    {
+      "name": "BALL OF FLAME",
+      "roll": 5,
+      "range": "30cm",
+      "text": [
+        "*At the Wizard's beckoning the mangled corpses that litter the battleground rise from the dead to continue the slaughter.*",
+        "",
+        "This spell can be cast upon a combat engagement taking place within 30cm of the Wizard. The spell can be cast regardless of whether the Wizard can see any units in the combat engagement or not. A single combat engagement can only be affected once by this spell in any turn regardless of how many units are involved in the combat. For purposes of deciding whether a combat is eligible as a target, combat engagements are as they appear in the Shooting phase when the spell is cast: so it is possible for pursuit or advances to bring two units of raised dead into the same engagement later on.",
+        "",
+        "A Skeleton unit of three stands is created. The raised unit must be placed either so that it can fight in the combat engagement, or so that it can support a friendly unit that is already engaged. The unit can be placed to the enemy's front, side or rear edges, or lapped round as required to join the engagement. If there is insufficient room for the raised unit to contact the enemy, the unit must be positioned so that it touches at least one friendly unit that is already engaged. A raised unit can be placed so that it is supporting where opportunity permits. If it is impossible to position the unit so that it touches either enemy or friends then the spell cannot be cast. Raised dead do not count as charging in the first round of combat. Raised dead are ignored for working out victory points at the end of the game."
+      ]
+    },
+    {
+      "name": "VOICE OF COMMAND",
+      "roll": 5,
+      "range": "30cm",
+      "text": [
+        "*The Wizard's enemies crumble to dust as he smites them with the corrupting Touch of Death.*",
+        "",
+        "The Wizard can cast this spell if he has joined a unit in combat. The spell can be cast on any single enemy unit that it is touching the unit the Wizard has joined.",
+        "",
+        "The target unit takes three attacks worked out in the usual way. Any hits scored are carried over into the first round of combat and count as having been struck in the first round for purposes of working out combat results."
+      ]
+    },
+    {
+      "name": "WEIRD ENCHANTMENT",
+      "roll": 4,
+      "range": "30cm",
+      "text": [
+        "*A dark cloud of doom and despair settles over the enemy, sapping their courage and dampening their warlike spirit.*",
+        "",
+        "This spell can be cast on any enemy unit within range regardless of whether the Wizard can see it or not.",
+        "",
+        "The spell takes effect until the end of the opposing player's next turn.",
+        "",
+        "Whilst the spell lasts the unit cannot charge and if engaged in combat will not pursue or advance. Even units that are otherwise obliged to charge, pursue, or advance will not do so if affected by Doom and Despair. Note that even other Undead are not immune - they are overcome by the ennui of the tomb!"
+      ]
+    },
+    {
+      "name": "TELEPORT",
+      "roll": 2,
+      "range": "-",
+      "text": [
+        "*A fearsome bolt of sorcerous lightning flies from the Wizard's outstretched finger tips and strikes an enemy unit.*",
+        "",
+        "This spell can be cast on an enemy unit. The Wizard must be able to see his target to use this spell. The spell cannot be directed at a unit engaged in combat.",
+        "",
+        "The Death Bolt is treated like three ordinary shooting attacks except that armour has no effect (all targets count as having no armour). A unit can be driven back by a Death Bolt as with ordinary shooting."
+      ]
+    }
+  ]
+}

@@ -1,10 +1,7 @@
 <template>
   <v-app-bar>
     <v-row align="center">
-      <v-col
-        cols="2"
-        class="ml-6"
-      >
+      <v-col class="ml-6">
         <nuxt-link to="/">
           <v-img
             width="300"
@@ -36,7 +33,6 @@
       </v-col>
       <v-spacer />
       <v-col
-        cols="1"
         align="end"
         class="mr-6"
       >
@@ -48,6 +44,7 @@
 <script setup lang="ts">
 const { t: $t } = useI18n();
 const armies = computed(() => [
+  { title: $t('armies.all'), urlPath: '/armies/all-armies' },
   { title: $t('armies.tombKing'), urlPath: '/armies/tomb-kings-army' },
   { title: $t('armies.albion'), urlPath: '/armies/albion-army' },
   { title: $t('armies.araby'), urlPath: '/armies/araby-army' },
@@ -83,7 +80,6 @@ const rulesList = computed(() => [
 ]);
 
 const basicButtons = computed(() => [
-  { title: $t('labels.learn'), urlPath: '/get-started' },
   { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
   { title: $t('labels.tournaments'), urlPath: '/tournaments' },

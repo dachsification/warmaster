@@ -1,0 +1,12 @@
+{
+  "faction": "Fallback Army",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Select Army",
+      "points": 0,
+      "min": "-",
+      "max": "-"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "faction": "dark elves",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Spearmen",
+      "points": 60,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Crossbowmen",
+      "points": 75,
+      "min": 1,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Witch Elves",
+      "points": 70,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Dark Riders",
+      "points": 95,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Cold One Knights",
+      "points": 130,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Harpies",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "War Hydra",
+      "points": 125,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bolt Thrower",
+      "points": 55,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 155,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Sorceress",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Manticore",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Chariot",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Cauldron of Blood",
+      "points": 15,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

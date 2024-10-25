@@ -1,0 +1,180 @@
+{
+  "faction": "regiments of renown",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Pirazzo's Lost Legion",
+      "points": 60,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Alcatani Fellowship",
+      "points": 30,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Ricco's Republican Guard",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Leopold's Leopard Company",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Marksmen of Miragliano",
+      "points": 105,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Braganza's Besiegers",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Lumpin Croop's Cocks",
+      "points": 60,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Vespero's Vendetta",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "The Cursed Company",
+      "points": 135,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Mengil's Manflyers",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Anakonda's Amazons",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bearmen of Urslo",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Mengil's Manflyers",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Ruglud's Armoured Orcs",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Long Drong's Slayer Pirates",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Golgfag's Mercenary Ogres",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Voland's Venators",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Al Muktar's Desert Dogs",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Oglah Khan's Wolfboyz",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Tichi-Huichi's Raiders",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Birdmen of Catrazza",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bronzino's Galloper Guns",
+      "points": 75,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Asarnil The Dragonlord",
+      "points": 95,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Gotrek and Felix",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "The Witch Hunters",
+      "points": 45,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

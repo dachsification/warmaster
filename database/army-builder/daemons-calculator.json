@@ -1,0 +1,96 @@
+{
+  "faction": "daemons",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Daemon Horde",
+      "points": 75,
+      "min": 3,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Swarm",
+      "points": 45,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Cavalry",
+      "points": 110,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Hounds",
+      "points": 90,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Chariots",
+      "points": 95,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Beasts",
+      "points": 200,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Daemon Flyers",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Greater Daemon",
+      "points": 280,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Overlord",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Lord Hero",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Sorcerer",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Daemonic Wings",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Favour of the Gods",
+      "points": 50,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

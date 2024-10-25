@@ -1,0 +1,96 @@
+{
+  "faction": "tomb kings",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Skeletons",
+      "points": 30,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Skeleton Bowmen",
+      "points": 45,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Skeleton Cavalry",
+      "points": 60,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Skeleton Chariots",
+      "points": 110,
+      "min": "-",
+      "max": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Carrion",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bone Giant",
+      "points": 110,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Sphinx",
+      "points": 135,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Skull Chukka",
+      "points": 85,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Bone Thrower",
+      "points": 65,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Tomb King",
+      "points": 130,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Liche Priest",
+      "points": 90,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Zombie Dragon",
+      "points": 100,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Liche Chariot",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

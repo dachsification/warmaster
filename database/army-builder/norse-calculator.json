@@ -1,0 +1,103 @@
+{
+  "faction": "norse",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Bondsmen",
+      "points": 60,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Huscarls",
+      "points": 110,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Huntsmen",
+      "points": 55,
+      "min": "-",
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Berserkers",
+      "points": 70,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Ulfwerener",
+      "points": 115,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Cavalry",
+      "points": 90,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Storm Giant",
+      "points": 135,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "War Mammoth",
+      "points": 180,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Valkyries",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Jarl",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Shaman",
+      "points": 90,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Were Kin",
+      "points": 40,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Horn of Resounding",
+      "points": 20,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "faction": "albion",
+  "units": [
+    {
+      "quantity": 1,
+      "name": "Warriors",
+      "points": 60,
+      "min": 2,
+      "max": "-"
+    },
+    {
+      "quantity": 1,
+      "name": "Slingers",
+      "points": 40,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "quantity": 1,
+      "name": "Ogres",
+      "points": 105,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Wolfhounds",
+      "points": 40,
+      "min": "-",
+      "max": 6
+    },
+    {
+      "quantity": 1,
+      "name": "Cavalry",
+      "points": 90,
+      "min": "-",
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Chariots",
+      "points": 95,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "quantity": 1,
+      "name": "Giant",
+      "points": 135,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Giant Eagles",
+      "points": 70,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "General",
+      "points": 125,
+      "min": 1,
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Hero",
+      "points": 80,
+      "min": "-",
+      "max": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Druid",
+      "points": 45,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Giant Eagle",
+      "points": 20,
+      "min": "-",
+      "max": 1
+    },
+    {
+      "quantity": 1,
+      "name": "Chariot",
+      "points": 10,
+      "min": "-",
+      "max": 1
+    }
+  ]
+}
