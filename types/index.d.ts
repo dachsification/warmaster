@@ -7,11 +7,12 @@ declare global {
     points: number;
     min: string | number;
     max: string | number;
+    magicItem?: MagicItem[MagicItem | []] | [];
   };
 
   type FactionForCalculator = {
     name: string;
-    units: UnitForCalculator[];
+    units: [UnitForCalculator];
   };
 
   type Unit = {
@@ -37,13 +38,13 @@ declare global {
     spells: [{}];
   };
 
-  type magicItem = {
+  type MagicItem = {
     name: string;
     points: number;
     pointsB?: number | null;
     pointsC?: number | null;
     rule: string;
-    condition?: string | rule;
+    condition?: string | null;
     type: string;
   };
 }

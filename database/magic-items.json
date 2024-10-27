@@ -3,65 +3,89 @@
     {
       "name": "The Battle Banner",
       "points": 30,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "+1 Attack in the first Combat engagement.",
       "type": "Banner",
-      "rule": "+1 Attack in the first Combat engagement."
+      "condition": null
     },
     {
       "name": "The Banner of Shielding",
       "points": 50,
       "pointsB": 30,
       "pointsC": 15,
+      "rule": "+1 Armour value until stand is lost.",
       "type": "Banner",
-      "rule": "+1 Armour value until stand is lost."
+      "condition": null
     },
     {
       "name": "The Banner of Fortitude",
       "points": 50,
       "pointsB": 30,
+      "pointsC": null,
+      "rule": "+1 Hit in the first Combat engagement.",
       "type": "Banner",
-      "rule": "+1 Hit in the first Combat engagement."
+      "condition": null
     },
     {
       "name": "The Banner of Steadfastness",
       "points": 20,
       "pointsB": 15,
       "pointsC": 10,
+      "rule": "One shooting hit after saves is ignored until stand is lost.",
       "type": "Banner",
-      "rule": "One shooting hit after saves is ignored until stand is lost."
+      "condition": null
     },
     {
       "name": "The Banner of Fortune",
       "points": 15,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "Once per game re-roll all Attack dice either in the Shooting or Combat Phase.",
       "type": "Banner",
-      "rule": "Once per game re-roll all Attack dice either in the Shooting or Combat Phase."
+      "condition": null
     },
     {
       "name": "Sword of Destruction",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "One enemy unit in combat with the unit with the sword must re-roll one successful Armour roll each combat round.",
       "type": "Weapon",
-      "rule": "One enemy unit in combat with the unit with the sword must re-roll one successful Armour roll each combat round."
+      "condition": null
     },
     {
       "name": "Sword of Fate",
       "points": 5,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "+1 Attack to the unit/character it the first Combat round.",
       "type": "Weapon",
-      "rule": "+1 Attack to the unit/character it the first Combat round."
+      "condition": null
     },
     {
       "name": "Sword of Cleaving",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "Re-roll one unsuccessful Attack dice per combat round.",
       "type": "Weapon",
-      "rule": "Re-roll one unsuccessful Attack dice per combat round."
+      "condition": null
     },
     {
       "name": "Sword of Might",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
+      "rule": "+1 Attack to the unit/character in the Combat Phase.",
       "type": "Weapon",
-      "rule": "+1 Attack to the unit/character in the Combat Phase."
+      "condition": null
     },
     {
       "name": "Crown of Command",
       "points": 70,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "First General's command roll each turn may be against unmodified Command 10 value. If failed, the Crown is lost.",
       "type": "Device",
       "condition": "General only"
@@ -69,6 +93,8 @@
     {
       "name": "Helm of Dominion",
       "points": 40,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "The General has +1 Command value (maximum 10) for duration of one Command phase.",
       "type": "Device",
       "condition": "General only"
@@ -76,6 +102,8 @@
     {
       "name": "Orb of Majesty",
       "points": 30,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "The General can re-roll one failed Command roll against Command value of 8 with all usual adjustments.",
       "type": "Device",
       "condition": "General only"
@@ -83,6 +111,8 @@
     {
       "name": "Ring of Magic",
       "points": 30,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "A Wizard is able to cast one spell without a roll.",
       "type": "Device",
       "condition": "Wizard only"
@@ -90,6 +120,8 @@
     {
       "name": "Staff of Spellbinding",
       "points": 30,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "If an enemy Wizard fails to cast a spell, he can be spellbound on roll of 4+. Spellbound Wizard has -1 to cast a spell. One use only.",
       "type": "Device",
       "condition": "Wizard or Runesmith only"
@@ -97,6 +129,8 @@
     {
       "name": "Sceptre of Sovereignty",
       "points": 20,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "A General may ignore one Blunder roll made by himself or any other characters. The blundered order counts as successful.",
       "type": "Device",
       "condition": "General only"
@@ -104,6 +138,8 @@
     {
       "name": "Scroll of Dispelling",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "A Wizard can dispel one enemy spell.",
       "type": "Device",
       "condition": "Wizard or Runesmith only"
@@ -111,6 +147,8 @@
     {
       "name": "Wand of Power",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "A Wizard can add +1 to the attempt to cast one spell. 1 is always a fail.",
       "type": "Device",
       "condition": "Wizard only"
@@ -118,6 +156,8 @@
     {
       "name": "Rod of Repetition",
       "points": 10,
+      "pointsB": null,
+      "pointsC": null,
       "rule": "If a Wizard casts a spell successfully, once per game he can immediately try to cast another spell.",
       "type": "Device",
       "condition": "Wizard only"
