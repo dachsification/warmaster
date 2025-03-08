@@ -89,7 +89,7 @@ const rulesList = computed(() => [
 
 const basicButtons = computed(() => [
   { title: $t('labels.home'), urlPath: '/' },
-  { title: $t('labels.armybuilder'), urlPath: '/armybuilder' },
+  { title: $t('labels.armyBuilder'), urlPath: '/armyBuilder' },
   { title: $t('labels.guardians'), urlPath: '/guardians' },
   { title: $t('labels.tournaments'), urlPath: '/tournaments' },
 ]);

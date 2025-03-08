@@ -28,6 +28,7 @@
     "Lizardmen",
     "Minotaurs",
     "norse",
+    "Orks",
     "Pistoliers",
     "rulebook",
     "Rulebook",
@@ -40,9 +41,22 @@
     "Tuskgor",
     "Ungor",
     "Wargor",
-    "Wargors"
+    "Wargors",
+    "Nuxt",
+    "nuxt"
   ],
   "files.eol": "\n",
   "cSpell.ignoreWords": ["Einheitengröße"],
-  "cSpell.language": "en,de"
+  "cSpell.language": "en,de",
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "package.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders",
+    "nuxt.config.ts"
+  ]
 }

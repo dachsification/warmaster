@@ -27,21 +27,25 @@
       />
     </template>
     <template #expanded-row="{ columns, item }">
-      <tr v-if="item.magicItem">
+      <tr v-if="item.magicItem?.length">
         <td
           :colspan="columns.length"
           :width="columns.length"
         >
-          {{ item.magicItem[0]?.points }} Points - {{ item.magicItem[0]?.name }}: {{ item.magicItem[0]?.rule }}
-          <!-- v-for-schleife -->
+          <p
+            v-for="magicItem in item.magicItem"
+            :key="magicItem.name"
+          >
+            {{ magicItem.points }} - {{ magicItem.name }}
+          </p>
         </td>
       </tr>
     </template>
     <template #item.data-table-expand="{ item, toggleExpand, internalItem }">
       <v-icon
-        v-if="item.magicItem"
+        v-if="item.magicItem?.length"
         icon="mdi-plus"
-        @click="toggleExpand(internalItem)"
+        @click.stop="toggleExpand(internalItem)"
       />
     </template>
   </v-data-table>

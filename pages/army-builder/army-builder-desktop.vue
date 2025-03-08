@@ -59,7 +59,7 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="auto">
-        <v-btn @click="resetCalculator"> Reset Armybuilder</v-btn>
+        <v-btn @click="resetCalculator"> Reset Army Builder</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -73,7 +73,10 @@ const pointsCalculation = computed(() => `${currentPoints.value} / ${selectedArm
 const tooMuchPointsWarning = computed(
   () => `centered-input font-weight-bold ${currentPoints.value > selectedArmySize.value ? 'text-red' : ''}`,
 );
+const indexForMagicItem = ref<number>();
+const isDialogOpen = ref(false);
 
+const stupidUnit = ref('');
 // Selects & Button
 const itemsForFactionSelect = Armies.armies;
 const itemsForPointSelect = ['1000', '1250', '1500', '2000'];
@@ -85,6 +88,7 @@ const disableSelectedFaction = ref(false);
 const currentPoints = ref(0);
 // Armeeliste
 const armyList = ref<UnitForCalculator[]>([]);
+const chosenFaction = ref();
 
 // Reset Points, armyList and MinButton
 watch(
@@ -159,6 +163,8 @@ function removeItem(_event: PointerEvent, row: any) {
   const selectedUnit: UnitForCalculator = { ...row.item };
   const pointsPerUnit = selectedUnit.points / selectedUnit.quantity;
   if (typeof selectedUnit.min === 'number') {
+    // Reduziert Min-Units bis Min
+    // Muss MagicItems noch löschen von magicItem.length > quantity
     if (selectedUnit.quantity > selectedUnit.min) {
       armyList.value.forEach((unit) => {
         if (unit.name === selectedUnit.name) {
@@ -167,12 +173,16 @@ function removeItem(_event: PointerEvent, row: any) {
       });
     }
   } else if (selectedUnit.quantity > 1) {
+    // Reduziert Anzahl bis 1
+    // Muss MagicItems noch löschen von magicItem.length > quantity
     armyList.value.forEach((unit) => {
       if (unit.name === selectedUnit.name) {
         calculateRemoving(unit, pointsPerUnit);
       }
     });
   } else {
+    // Löscht Einheit und Magic Items
+    deleteItem(selectedUnit);
     armyList.value.splice(row.index, 1);
     reducePoints(pointsPerUnit);
   }
@@ -187,7 +197,6 @@ function resetCalculator() {
   selectedFaction.value = '';
 }
 
-const chosenFaction = ref();
 function fillFaction(faction: any) {
   chosenFaction.value = faction;
 }
@@ -195,23 +204,22 @@ function fillFaction(faction: any) {
 function addMinUnits(modelValue: any) {
   disableSelectArmySize.value = true;
   disableSelectedFaction.value = true;
-  const armysizeMultiplier = Number(modelValue.charAt(0));
+  const armySizeMultiplier = Number(modelValue.charAt(0));
   const minUnitList = chosenFaction.value.units
     .filter((e: any) => typeof e.min === 'number')
     .map((r: any) => ({ ...r }));
   minUnitList.forEach((e: any) => {
     if (typeof e.min === 'number') {
-      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * armysizeMultiplier : 1;
+      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * armySizeMultiplier : 1;
       e.quantity *= requiredMin;
       e.points *= requiredMin;
       addPoints(e.points);
     }
   });
   armyList.value = minUnitList;
-  findStupidRule(armysizeMultiplier, armyList.value);
+  findStupidRule(armySizeMultiplier, armyList.value);
 }
 
-const stupidUnit = ref('');
 function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
   const stupidArmiesWithStupidRule = ['the empire', 'dwarfs', 'chaos dwarfs', 'dogs of war', 'cathay', 'goblins'];
   const onlyForStupidArmies = stupidArmiesWithStupidRule.includes(chosenFaction.value.faction);
@@ -243,19 +251,16 @@ function findStupidRule(armySize: number, minUnitList: UnitForCalculator[]) {
   }
 }
 
-const indexForMagicItem = ref<number>();
-const isDialogOpen = ref(false);
-
 function editItem(item: any) {
   isDialogOpen.value = true;
   indexForMagicItem.value = armyList.value.indexOf(item);
 }
 
-function deleteItem(item: UnitForCalculator) {
-  if (item.magicItem) {
-    indexForMagicItem.value = armyList.value.indexOf(item);
-    reducePoints(item.magicItem[item.magicItem.length - 1].points);
-    armyList.value[indexForMagicItem.value].magicItem?.pop();
+function deleteItem(unit: UnitForCalculator) {
+  if (unit.magicItem) {
+    indexForMagicItem.value = armyList.value.indexOf(unit);
+    reducePoints(unit.magicItem[unit.magicItem.length - 1].points);
+    armyList.value[indexForMagicItem.value]?.magicItem?.pop();
   }
 }
 
@@ -266,9 +271,15 @@ function closeDialog() {
 function addMagic(magicItem: MagicItem) {
   if (indexForMagicItem.value !== undefined && indexForMagicItem.value !== null) {
     if (magicItem) {
-      armyList.value[indexForMagicItem.value].magicItem = [];
-      armyList.value[indexForMagicItem.value].magicItem?.push(magicItem);
-      addPoints(magicItem.points);
+      if (!armyList.value[indexForMagicItem.value].magicItem) {
+        armyList.value[indexForMagicItem.value].magicItem = [];
+      }
+      if (armyList.value[indexForMagicItem.value].quantity > armyList.value[indexForMagicItem.value].magicItem.length) {
+        armyList.value[indexForMagicItem.value].magicItem?.push(magicItem);
+        addPoints(magicItem.points);
+      } else {
+        console.log('Errormessage. Only 1 item per Unit');
+      }
     }
   }
 }

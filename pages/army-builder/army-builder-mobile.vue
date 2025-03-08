@@ -403,18 +403,18 @@ function reset() {
 function addMinUnits(modelValue: any) {
   disableSelectArmySize.value = true;
   disableSelectedFaction.value = true;
-  const armysizeMultiplier = Number(modelValue.charAt(0));
+  const armySizeMultiplier = Number(modelValue.charAt(0));
   const minUnitList = faction.value.units.filter((e) => typeof e.min === 'number').map((r) => ({ ...r }));
   minUnitList.forEach((e) => {
     if (typeof e.min === 'number') {
-      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * armysizeMultiplier : 1;
+      const requiredMin = isNotGeneral(e.min, e.max) ? e.min * armySizeMultiplier : 1;
       e.quantity *= requiredMin;
       e.points *= requiredMin;
       addPoints(e.points);
     }
   });
   armyList.value = minUnitList;
-  findStupidRule(armysizeMultiplier, armyList.value);
+  findStupidRule(armySizeMultiplier, armyList.value);
 }
 
 const stupidUnit = ref('');

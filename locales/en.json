@@ -3,7 +3,7 @@
     "learn": "Learn",
     "armies": "Armies",
     "rules": "Rules",
-    "armybuilder": "Armybuilder",
+    "armyBuilder": "Army Builder",
     "addMagicItem": "Add Magic Item",
     "home": "Home",
     "armyRules": "Army Rules",
@@ -52,12 +52,12 @@
     "title": "Title",
     "download": "Download",
     "intro": "Introduction",
-    "list": "Armylist",
+    "list": "Army List",
     "specialRules": "Special Rules",
     "cookie": "Cookie Consent",
     "warmasterGermany": "Warmaster Germany"
   },
-  "armylistHeader": {
+  "armyListHeader": {
     "troop": "Troop",
     "type": "Type",
     "attack": "Attack",
@@ -72,7 +72,7 @@
   "welcome": "Welcome",
   "text": {
     "introduction": "Welcome people",
-    "introGuardians": "Tournament-Package for Warmster Revolution",
+    "introGuardians": "Tournament-Package for Warmaster Revolution",
     "mainSubtitle": "A fanpage dedicated to the Warmaster Revolution Tabletop",
     "cookie": "This site uses cookies for your theme, your language choice and the concent of this banner. You can accept the use of these cookies with clicking of 'accept' or leave the Website.",
     "legal": "This website is completely unofficial and in no way endorsed by Games Workshop Limited. All associated logos, marks, names, races, race insignia, characters, vehicles, locations, units, illustrations and images from the Warhammer world are either ®, TM and/or © Copyright Games Workshop Ltd 2000-2024, variably registered in the UK and other countries around the world. Used without permission. No challenge to their status intended. All Rights Reserved to their respective owners"

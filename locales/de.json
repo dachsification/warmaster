@@ -3,7 +3,7 @@
     "learn": "Lernen",
     "armies": "Armeen",
     "rules": "Regeln",
-    "armybuilder": "Armeebauer",
+    "armyBuilder": "Armeebauer",
     "armyRules": "Armee-Sonderregeln",
     "starting": "Loslegen",
     "welcome": "Willkommen",
@@ -41,7 +41,7 @@
     "witchHunter": "Hexenjäger",
     "woodElves": "Waldelfen"
   },
-  "armylistHeader": {
+  "armyListHeader": {
     "troop": "Einheit",
     "type": "Typ",
     "attack": "Attacken",
