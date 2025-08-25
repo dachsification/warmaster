@@ -65,7 +65,7 @@
   </v-container>
 </template>
 <script setup lang="ts">
-import Armies from '../../database/armies-overview.json';
+import Factions from '../../database/warmaster/faction-list.json';
 import ArmyListTable from './army-list-table.vue';
 import FactionTable from './faction-table.vue';
 
@@ -78,7 +78,7 @@ const isDialogOpen = ref(false);
 
 const stupidUnit = ref('');
 // Selects & Button
-const itemsForFactionSelect = Armies.armies;
+const itemsForFactionSelect = Factions.factions;
 const itemsForPointSelect = ['1000', '1250', '1500', '2000'];
 const selectedFaction = ref('');
 const selectedArmySize = ref();
